@@ -52,7 +52,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-neutral-950 px-6 py-24 text-white"
+      className="bg-gradient-to-b from-white via-blue-50 to-white px-6 py-24"
     >
 
       <div className="mx-auto max-w-7xl">
@@ -60,15 +60,15 @@ export default function Services() {
         {/* TOP */}
         <div className="mb-14 text-center">
 
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-500">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-purple-600">
             Decoration Categories
           </p>
 
-          <h2 className="mt-4 text-4xl font-black md:text-6xl">
+          <h2 className="mt-4 text-4xl font-black md:text-6xl gradient-heading-secondary">
             Luxury Celebration Setups
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-gray-400">
+          <p className="mx-auto mt-6 max-w-2xl text-gray-600">
             Premium balloon decoration services crafted for unforgettable
             celebrations and beautiful memories.
           </p>
@@ -82,7 +82,7 @@ export default function Services() {
 
             <div
               key={service.title}
-              className="group overflow-hidden rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-yellow-500/40"
+              className="group overflow-hidden rounded-[32px] border border-gray-200 bg-white shadow-lg transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-purple-300"
             >
 
               {/* IMAGE */}
@@ -94,18 +94,18 @@ export default function Services() {
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
 
               </div>
 
               {/* CONTENT */}
               <div className="p-6">
 
-                <h3 className="text-2xl font-bold leading-snug">
+                <h3 className="text-2xl font-bold leading-snug text-gray-800">
                   {service.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-400">
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
                   Premium luxury decoration setup with professional styling.
                 </p>
 
@@ -114,7 +114,7 @@ export default function Services() {
                   href="https://wa.me/919602060414"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex rounded-full bg-yellow-500 px-5 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-white"
+                  className="mt-6 inline-flex rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-5 py-3 text-sm font-semibold text-white transition hover:scale-105 hover:shadow-lg"
                 >
                   Book Now
                 </a>
