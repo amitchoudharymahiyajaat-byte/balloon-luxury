@@ -44,13 +44,18 @@ export default function Cities() {
     >
 
       {/* TOP */}
-      <div className="mb-16 text-center">
+      <div className="mb-16 text-center px-6">
 
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">
           Our Cities
         </p>
 
-        <h2 className="mt-4 text-4xl font-black md:text-6xl gradient-heading">
+        <h2 className="mt-4 text-4xl font-black md:text-6xl" style={{
+          background: "linear-gradient(90deg, #ff6b6b 0%, #ffa500 25%, #4ecdc4 50%, #ff1493 75%, #9d4edd 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text"
+        }}>
           We Decorate Across India
         </h2>
 
