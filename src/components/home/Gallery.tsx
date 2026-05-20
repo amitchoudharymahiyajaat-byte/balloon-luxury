@@ -22,11 +22,11 @@ export default function Gallery() {
       {/* TOP */}
       <div className="mb-14 text-center">
 
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-500">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-pink-600">
           Decoration Gallery
         </p>
 
-        <h2 className="mt-4 text-4xl font-black md:text-6xl">
+        <h2 className="mt-4 text-4xl font-black md:text-6xl gradient-heading-tertiary">
           Luxury Celebration Moments
         </h2>
 
