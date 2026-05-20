@@ -40,18 +40,18 @@ export default function Cities() {
   return (
     <section
       id="cities"
-      className="overflow-hidden bg-white py-20"
+      className="overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white py-24"
     >
 
       {/* TOP */}
-      <div className="mb-12 text-center">
+      <div className="mb-16 text-center">
 
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-500">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">
           Our Cities
         </p>
 
-        <h2 className="mt-3 text-4xl font-black md:text-6xl">
-          Available Across India
+        <h2 className="mt-4 text-4xl font-black md:text-6xl gradient-heading">
+          We Decorate Across India
         </h2>
 
       </div>

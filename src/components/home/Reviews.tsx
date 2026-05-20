@@ -2,7 +2,7 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="bg-[#fffdf9] py-16 px-4 overflow-hidden"
+      className="bg-gradient-to-b from-white via-yellow-50 to-white py-24 px-4 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
 
@@ -57,11 +57,11 @@ export default function Reviews() {
           {/* TOP */}
           <div className="mb-6">
 
-            <h2 className="text-3xl font-bold text-black">
-              What customers say
+            <h2 className="text-3xl md:text-4xl font-black gradient-heading">
+              What Customers Say
             </h2>
 
-            <p className="text-gray-500 mt-1">
+            <p className="text-gray-600 mt-2">
               Real stories from real celebrations
             </p>
 
@@ -133,7 +133,7 @@ export default function Reviews() {
 
                 <div
                   key={index}
-                  className="min-w-[260px] md:min-w-[290px] h-[220px] rounded-[28px] border border-black/5 bg-white p-5 flex-shrink-0 shadow-sm"
+                  className="min-w-[260px] md:min-w-[290px] h-[220px] rounded-[28px] border border-gray-200 bg-white p-5 flex-shrink-0 shadow-md hover:shadow-lg transition"
                 >
 
                   {/* TOP */}

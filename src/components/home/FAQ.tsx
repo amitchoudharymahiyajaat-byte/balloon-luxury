@@ -42,23 +42,23 @@ export default function FAQ() {
 
     <section
       id="faq"
-      className="bg-[#fffdf9] px-4 py-14"
+      className="bg-gradient-to-b from-white via-purple-50 to-white px-4 py-24"
     >
 
       <div className="mx-auto max-w-4xl">
 
         {/* TOP */}
-        <div className="mb-8 text-center">
+        <div className="mb-12 text-center">
 
-          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-yellow-500">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-purple-600">
             FAQ
           </p>
 
-          <h2 className="mt-3 text-3xl md:text-5xl font-black text-black">
+          <h2 className="mt-4 text-4xl md:text-6xl font-black gradient-heading">
             Frequently Asked Questions
           </h2>
 
-          <p className="mx-auto mt-3 max-w-xl text-sm text-gray-500">
+          <p className="mx-auto mt-4 max-w-xl text-sm text-gray-600">
             Quick answers about bookings and decoration setup.
           </p>
 
@@ -75,7 +75,7 @@ export default function FAQ() {
 
               <div
                 key={index}
-                className="rounded-2xl border border-black/10 bg-white overflow-hidden"
+                className="rounded-2xl border border-gray-200 bg-white overflow-hidden hover:shadow-md transition"
               >
 
                 {/* BUTTON */}
@@ -83,10 +83,10 @@ export default function FAQ() {
                   onClick={() =>
                     setOpenIndex(isOpen ? null : index)
                   }
-                  className="flex w-full items-center justify-between px-5 py-5 text-left"
+                  className="flex w-full items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition"
                 >
 
-                  <h3 className="text-base font-semibold text-black">
+                  <h3 className="text-base font-semibold text-gray-800">
                     {faq.question}
                   </h3>
 
@@ -99,7 +99,7 @@ export default function FAQ() {
                 {/* ANSWER */}
                 {isOpen && (
 
-                  <div className="px-5 pb-5">
+                  <div className="px-6 pb-5 border-t border-gray-100">
 
                     <p className="text-sm leading-relaxed text-gray-600">
                       {faq.answer}
