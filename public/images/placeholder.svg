@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Event Wala Dost placeholder</title>
+  <desc id="desc">Elegant balloon decoration placeholder with cream and gold styling</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff8eb"/>
+      <stop offset="0.52" stop-color="#f7e2b7"/>
+      <stop offset="1" stop-color="#d7a84f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="55%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#7a4b16" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+  <g filter="url(#shadow)" opacity="0.96">
+    <ellipse cx="430" cy="318" rx="86" ry="112" fill="#fff4d8"/>
+    <ellipse cx="545" cy="250" rx="92" ry="122" fill="#f8d88a"/>
+    <ellipse cx="675" cy="305" rx="94" ry="122" fill="#fffaf0"/>
+    <ellipse cx="778" cy="232" rx="78" ry="104" fill="#d7a84f"/>
+    <path d="M430 428 C456 522 520 584 600 646" fill="none" stroke="#b8872b" stroke-width="5" stroke-linecap="round"/>
+    <path d="M545 372 C562 480 584 566 600 646" fill="none" stroke="#b8872b" stroke-width="5" stroke-linecap="round"/>
+    <path d="M675 426 C648 518 622 590 600 646" fill="none" stroke="#b8872b" stroke-width="5" stroke-linecap="round"/>
+    <path d="M778 334 C730 458 662 562 600 646" fill="none" stroke="#b8872b" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <path d="M360 650 C480 606 724 606 840 650 C738 716 466 716 360 650Z" fill="#fff8eb" opacity="0.72"/>
+  <text x="600" y="716" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#7a4b16">Event Wala Dost</text>
+  <text x="600" y="766" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" letter-spacing="5" fill="#9c6a1f">BALLOON DECORATION</text>
+</svg>

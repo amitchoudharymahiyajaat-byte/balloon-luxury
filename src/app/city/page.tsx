@@ -1,129 +1,43 @@
+import Link from "next/link";
 import type { Metadata } from "next";
-const cities = [
-  "jaipur",
-  "delhi",
-  "gurgaon",
-  "noida",
-  "udaipur",
-  "mumbai",
-  "pune",
-  "bangalore",
-];
+import { cities, createPageMetadata } from "../../lib/seo";
 
-export async function generateStaticParams() {
-  return cities.map((city) => ({
-    city,
-  }));
-}
+export const metadata: Metadata = createPageMetadata({
+  title: "Choose Your City | Event Wala Dost",
+  description:
+    "Select your city to view premium luxury balloon decoration services and event styling options.",
+  path: "/city",
+});
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ city: string }>;
-}): Promise<Metadata> {
-
-  const { city } = await params;
-
-  const cityName =
-    city.charAt(0).toUpperCase() + city.slice(1);
-
-  return {
-    title: `Balloon Decoration in ${cityName} | Event Wala Dost`,
-
-    description: `Premium balloon decoration services in ${cityName} for birthdays, anniversaries, baby showers, romantic room setups and surprise celebrations.`,
-
-    keywords: [
-      `balloon decoration in ${cityName}`,
-      `birthday decoration in ${cityName}`,
-      `anniversary decoration in ${cityName}`,
-      `room decoration in ${cityName}`,
-      `proposal decoration in ${cityName}`,
-    ],
-
-    openGraph: {
-      title: `Balloon Decoration in ${cityName}`,
-
-      description: `Luxury balloon decoration services in ${cityName}.`,
-
-      images: [
-        {
-          url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
-          width: 1200,
-          height: 630,
-        },
-      ],
-    },
-  };
-}
-
-export default async function CityPage({
-  params,
-}: {
-  params: Promise<{ city: string }>;
-}) {
-  const { city } = await params;
-
+export default function CityPage() {
   return (
     <main className="min-h-screen bg-white text-black">
+      <section className="mx-auto flex min-h-[620px] max-w-6xl flex-col justify-center px-4 py-12 text-center sm:px-6 md:py-16 lg:py-20">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-yellow-500">
+          Choose Your City
+        </p>
+        <h1 className="text-3xl font-black tracking-tight text-black sm:text-4xl md:text-5xl">
+          Luxury Balloon Decoration in Your Area
+        </h1>
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray-600 sm:text-base">
+          Explore city-specific premium balloon decoration services, gallery examples, and FAQs tailored for your location.
+        </p>
 
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-black text-white">
-
-        <div className="absolute inset-0">
-
-          <img
-            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2000&auto=format&fit=crop"
-            alt={city}
-            className="h-full w-full object-cover opacity-40"
-          />
-
-        </div>
-
-        <div className="absolute inset-0 bg-black/60"></div>
-
-        <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 text-center">
-
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-yellow-400">
-            Premium Balloon Decoration
-          </p>
-
-          <h1 className="max-w-5xl text-5xl font-black leading-tight md:text-7xl">
-
-            Balloon Decoration
-            <br />
-            In {city.charAt(0).toUpperCase() + city.slice(1)}
-
-          </h1>
-
-          <p className="mt-8 max-w-2xl text-lg text-gray-300">
-
-            Luxury birthday, anniversary, baby shower and surprise decorations
-            available in {city} with same day setup.
-
-          </p>
-
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-
-            <a
-              href="https://wa.me/919602060414"
-              className="rounded-full bg-yellow-500 px-8 py-4 font-semibold text-black transition hover:scale-105"
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {cities.map((city) => (
+            <Link
+              key={city.slug}
+              href={`/${city.slug}`}
+              className="rounded-[24px] border border-black/10 bg-[#fff7f1] px-5 py-5 text-left shadow-sm transition hover:-translate-y-1 hover:border-yellow-300 hover:shadow-lg"
             >
-              Book On WhatsApp
-            </a>
-
-            <a
-              href="tel:+919602060414"
-              className="rounded-full border border-white/20 px-8 py-4 font-semibold"
-            >
-              Call Now
-            </a>
-
-          </div>
-
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b2662f]">
+                {city.name}
+              </p>
+              <p className="mt-3 text-xl font-semibold text-black">View Decoration Options</p>
+            </Link>
+          ))}
         </div>
-
       </section>
-
     </main>
   );
 }

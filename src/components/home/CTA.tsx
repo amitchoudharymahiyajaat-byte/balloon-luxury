@@ -1,8 +1,20 @@
-export default function CTA() {
-  return (
-    <section className="bg-gradient-to-b from-white to-gray-50 px-6 py-24">
+"use client";
 
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-[40px] bg-gradient-to-br from-yellow-500 via-yellow-400 to-yellow-600 p-10 text-black md:p-16">
+import {
+  trackBookingClick,
+  trackCallClick,
+  trackWhatsAppClick,
+} from "../../lib/tracking";
+
+export default function CTA({
+  city = "major cities in India",
+}: {
+  city?: string;
+}) {
+  return (
+    <section className="bg-gradient-to-b from-white to-gray-50 px-4 py-12 sm:px-6 md:py-16 lg:py-20">
+
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-gradient-to-br from-yellow-500 via-yellow-400 to-yellow-600 p-6 text-black shadow-lg sm:p-8 md:p-12">
 
         <div className="max-w-4xl">
 
@@ -10,32 +22,37 @@ export default function CTA() {
             Book Your Decoration
           </p>
 
-          <h2 className="mt-5 text-4xl font-black leading-tight md:text-6xl text-black">
+          <h2 className="mt-4 text-3xl font-black leading-tight text-black sm:text-4xl md:text-5xl">
             Make Your Celebration
             <br />
             Truly Unforgettable
           </h2>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-black/70">
+          <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-black/70">
             Premium balloon decoration services available with same day setup
-            across major cities in India.
+            across {city}.
           </p>
 
           {/* BUTTONS */}
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
 
             <a
               href="https://wa.me/919602060414"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-black px-8 py-4 font-semibold text-white transition hover:scale-105 hover:shadow-lg"
+              onClick={() => {
+                trackWhatsAppClick(`cta_whatsapp_${city}`);
+                trackBookingClick(`cta_whatsapp_${city}`);
+              }}
+              className="rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:scale-105 hover:shadow-lg sm:px-8 sm:py-4 sm:text-base"
             >
               WhatsApp Now
             </a>
 
             <a
               href="tel:+919602060414"
-              className="rounded-full border-2 border-black text-black px-8 py-4 font-semibold transition hover:bg-black hover:text-white"
+              onClick={() => trackCallClick(`cta_call_${city}`)}
+              className="rounded-full border-2 border-black text-black px-4 sm:px-8 py-2.5 sm:py-4 text-sm sm:text-base font-semibold transition hover:bg-black hover:text-white"
             >
               Call Now
             </a>

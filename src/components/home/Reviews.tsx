@@ -1,22 +1,30 @@
-export default function Reviews() {
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function Reviews({
+  city = "India",
+}: {
+  city?: string;
+}) {
   return (
     <section
       id="reviews"
-      className="bg-gradient-to-b from-white via-yellow-50 to-white py-24 px-4 overflow-hidden"
+      className="overflow-hidden bg-gradient-to-b from-white via-yellow-50 to-white px-4 py-12 sm:px-6 md:py-16 lg:py-20"
     >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6">
 
         {/* LEFT CARD */}
-        <div className="w-full lg:w-[280px] lg:min-w-[280px] rounded-[32px] bg-gradient-to-br from-yellow-500 via-yellow-400 to-yellow-600 p-6 text-black shadow-xl">
+        <div className="w-full rounded-[28px] bg-gradient-to-br from-yellow-500 via-yellow-400 to-yellow-600 p-5 text-black shadow-lg sm:p-6 lg:w-[280px] lg:min-w-[280px]">
 
           <p className="uppercase tracking-[3px] text-xs font-bold">
             Reviews
           </p>
 
-          <h2 className="mt-4 text-3xl font-black leading-tight">
+          <h2 className="mt-3 text-2xl sm:text-3xl font-black leading-tight">
             Loved by
             <br />
-            3000+ Families
+            3000+ {city} Families
           </h2>
 
           <div className="mt-8 flex items-end gap-3">
@@ -44,7 +52,7 @@ export default function Reviews() {
           </div>
 
           <p className="mt-5 text-sm leading-relaxed">
-            Based on real decoration bookings across India.
+            Based on real decoration bookings across {city}.
           </p>
 
         </div>
@@ -57,12 +65,17 @@ export default function Reviews() {
           {/* TOP */}
           <div className="mb-6">
 
-            <h2 className="text-3xl md:text-4xl font-black gradient-heading">
+            <h2 className="text-2xl font-black sm:text-3xl md:text-4xl" style={{
+              background: "linear-gradient(90deg, #ff6b6b 0%, #ffa500 25%, #4ecdc4 50%, #ff1493 75%, #9d4edd 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text"
+            }}>
               What Customers Say
             </h2>
 
             <p className="text-gray-600 mt-2">
-              Real stories from real celebrations
+              Real stories from celebrations in {city}
             </p>
 
           </div>
@@ -131,10 +144,14 @@ export default function Reviews() {
 
               ].map((item, index) => (
 
-                <div
-                  key={index}
-                  className="min-w-[260px] md:min-w-[290px] h-[220px] rounded-[28px] border border-gray-200 bg-white p-5 flex-shrink-0 shadow-md hover:shadow-lg transition"
-                >
+                <motion.div
+  key={index}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  viewport={{ once: true }}
+  className="h-[220px] min-w-[260px] flex-shrink-0 rounded-[24px] border border-gray-200 bg-white p-5 shadow-md transition hover:-translate-y-1 hover:shadow-lg md:min-w-[290px]"
+>
 
                   {/* TOP */}
                   <div className="flex items-center gap-3">
@@ -158,7 +175,7 @@ export default function Reviews() {
                   </div>
 
                   {/* STARS */}
-                  <div className="mt-4 text-yellow-500 text-sm">
+                  <div className="mb-4 sm:mb-5 text-lg">
                     ★★★★★
                   </div>
 
@@ -167,7 +184,7 @@ export default function Reviews() {
                     {item.review}
                   </p>
 
-                </div>
+                </motion.div>
 
               ))}
 

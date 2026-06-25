@@ -1,9 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { cities } from "../../lib/seo";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -34,21 +38,37 @@ export default function Header() {
           {/* DESKTOP NAV */}
           <nav className="hidden items-center gap-8 text-sm font-medium text-gray-700 md:flex">
 
-            <a href="#services" className="transition hover:text-black">
+            <Link href="/#services" className="transition hover:text-black">
               Services
-            </a>
+            </Link>
 
-            <a href="#gallery" className="transition hover:text-black">
+            <Link href="/#gallery" className="transition hover:text-black">
               Gallery
-            </a>
+            </Link>
 
-            <a href="#reviews" className="transition hover:text-black">
+            <Link href="/#reviews" className="transition hover:text-black">
               Reviews
-            </a>
+            </Link>
 
-            <a href="#faq" className="transition hover:text-black">
+            <Link href="/#faq" className="transition hover:text-black">
               FAQ
-            </a>
+            </Link>
+
+            <select
+              onChange={(e) => {
+                const val = (e.target as HTMLSelectElement).value;
+                if (val) router.push(`/${val}`);
+              }}
+              defaultValue=""
+              className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-700 backdrop-blur-xl outline-none transition hover:border-yellow-400"
+            >
+              <option value="">Select City</option>
+              {cities.map((city) => (
+                <option key={city.slug} value={city.slug}>
+                  {city.name}
+                </option>
+              ))}
+            </select>
 
           </nav>
 
@@ -84,13 +104,29 @@ export default function Header() {
 
             <div className="flex flex-col gap-5 text-lg font-medium text-black">
 
-              <a href="#services">Services</a>
+              <Link href="/#services">Services</Link>
 
-              <a href="#gallery">Gallery</a>
+              <Link href="/#gallery">Gallery</Link>
 
-              <a href="#reviews">Reviews</a>
+              <Link href="/#reviews">Reviews</Link>
 
-              <a href="#faq">FAQ</a>
+              <Link href="/#faq">FAQ</Link>
+
+              <select
+                onChange={(e) => {
+                  const val = (e.target as HTMLSelectElement).value;
+                  if (val) router.push(`/${val}`);
+                }}
+                defaultValue=""
+                className="rounded-full border border-black/10 bg-white px-4 py-3 text-left text-sm font-medium text-gray-700 outline-none"
+              >
+                <option value="">Select City</option>
+                {cities.map((city) => (
+                  <option key={city.slug} value={city.slug}>
+                    {city.name}
+                  </option>
+                ))}
+              </select>
 
               <a
                 href="https://wa.me/919602060414"

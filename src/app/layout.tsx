@@ -1,47 +1,41 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import StickyButtons from "../components/layout/StickyButtons";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import ClientEnhancements from "../components/layout/ClientEnhancements";
+import { createPageMetadata, localBusinessSchema, siteUrl } from "../lib/seo";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title:
-    "Event Wala Dost | Premium Balloon Decoration Services",
-
-  description:
-    "Luxury balloon decoration services for birthdays, anniversaries, baby showers, proposals and surprise celebrations across India.",
-
-  keywords: [
-    "balloon decoration",
-    "birthday decoration",
-    "anniversary decoration",
-    "room decoration",
-    "proposal decoration",
-    "baby shower decoration",
-    "balloon decorator near me",
-  ],
-
-  metadataBase: new URL("https://eventwaladost.com"),
-
-  openGraph: {
-    title:
-      "Event Wala Dost | Luxury Balloon Decorations",
-
-    description:
-      "Premium balloon decoration services across India.",
-
-    url: "https://eventwaladost.com",
-
-    siteName: "Event Wala Dost",
-
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
-        width: 1200,
-        height: 630,
-      },
-    ],
-
-    locale: "en_IN",
-    type: "website",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Event Wala Dost | Premium Balloon Decoration Services",
+    template: "%s | Event Wala Dost",
   },
+  ...createPageMetadata({
+    title: "Event Wala Dost | Premium Balloon Decoration Services",
+    description:
+      "Luxury balloon decoration services for birthdays, anniversaries, baby showers, proposals and surprise celebrations across India.",
+    keywords: [
+      "balloon decoration",
+      "birthday decoration",
+      "anniversary decoration",
+      "room decoration",
+      "proposal decoration",
+      "baby shower decoration",
+      "balloon decorator near me",
+    ],
+  }),
 };
 
 export default function RootLayout({
@@ -50,16 +44,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
+        <Header />
 
-  {children}
+        {children}
 
-  <StickyButtons />
+        <Footer />
 
-</body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
 
+        <ClientEnhancements />
+      </body>
     </html>
   );
 }

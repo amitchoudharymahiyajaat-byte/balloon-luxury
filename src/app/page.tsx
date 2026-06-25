@@ -1,21 +1,34 @@
-import Header from "../components/layout/Header";
-import StickyButtons from "../components/layout/StickyButtons";
+import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Hero from "../components/home/Hero";
-import Cities from "../components/home/Cities";
-import Services from "../components/home/Services";
-import Gallery from "../components/home/Gallery";
-import Reviews from "../components/home/Reviews";
-import FAQ from "../components/home/FAQ";
-import CTA from "../components/home/CTA";
-import Footer from "../components/layout/Footer";
+import { createPageMetadata } from "../lib/seo";
+
+const Cities = dynamic(() => import("../components/home/Cities"));
+const Services = dynamic(() => import("../components/home/Services"));
+const Gallery = dynamic(() => import("../components/home/Gallery"));
+const Pricing = dynamic(() => import("../components/home/Pricing"));
+const Reviews = dynamic(() => import("../components/home/Reviews"));
+const FAQ = dynamic(() => import("../components/home/FAQ"));
+const CTA = dynamic(() => import("../components/home/CTA"));
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Event Wala Dost | Premium Balloon Decoration Services",
+  description:
+    "Luxury balloon decoration services for birthdays, anniversaries, baby showers, proposals and surprise celebrations across India.",
+  keywords: [
+    "balloon decoration",
+    "birthday decoration",
+    "anniversary decoration",
+    "room decoration",
+    "proposal decoration",
+    "baby shower decoration",
+    "balloon decorator near me",
+  ],
+});
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white text-black">
-
-      <Header />
-
-      <StickyButtons />
 
       <Hero />
       
@@ -25,13 +38,13 @@ export default function Home() {
 
       <Gallery />
 
+      <Pricing />
+
       <Reviews />
       
       <FAQ />
       
       <CTA />
-      
-      <Footer />
 
     </main>
   );

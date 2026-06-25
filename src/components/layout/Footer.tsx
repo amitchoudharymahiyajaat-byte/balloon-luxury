@@ -1,102 +1,81 @@
+"use client";
+
+import Link from "next/link";
+import { trackCallClick, trackWhatsAppClick } from "../../lib/tracking";
+import { cities } from "../../lib/seo";
+
 export default function Footer() {
   return (
-    <footer className="bg-neutral-950 px-6 py-20 text-white">
-
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-4">
-
-        {/* BRAND */}
+    <footer className="bg-neutral-950 px-4 py-12 pb-24 text-white sm:px-6 md:py-16 md:pb-16 lg:py-20">
+      <div className="mx-auto grid max-w-7xl gap-8 sm:gap-10 md:grid-cols-4 md:gap-12">
         <div>
-
-          <h2 className="text-3xl font-black">
-            EWD
-          </h2>
+          <h2 className="text-3xl font-black">EWD</h2>
 
           <p className="mt-4 leading-relaxed text-gray-400">
-            Luxury balloon decoration services crafted for unforgettable celebrations across India.
+            Luxury balloon decoration services crafted for unforgettable
+            celebrations across India.
           </p>
-
         </div>
 
-        {/* SERVICES */}
         <div>
-
-          <h3 className="text-lg font-bold">
-            Services
-          </h3>
+          <h3 className="text-lg font-bold">Services</h3>
 
           <div className="mt-5 flex flex-col gap-3 text-gray-400">
-
-            <a href="#">Birthday Decoration</a>
-
-            <a href="#">Anniversary Decoration</a>
-
-            <a href="#">Baby Shower</a>
-
-            <a href="#">Proposal Setup</a>
-
+            <Link href="/#services">Birthday Decoration</Link>
+            <Link href="/#services">Anniversary Decoration</Link>
+            <Link href="/#services">Baby Shower</Link>
+            <Link href="/#services">Proposal Setup</Link>
           </div>
-
         </div>
 
-        {/* CITIES */}
         <div>
-
-          <h3 className="text-lg font-bold">
-            Cities
-          </h3>
+          <h3 className="text-lg font-bold">Explore</h3>
 
           <div className="mt-5 flex flex-col gap-3 text-gray-400">
-
-            <a href="/jaipur">Jaipur</a>
-
-            <a href="/delhi">Delhi</a>
-
-            <a href="/gurgaon">Gurgaon</a>
-
-            <a href="/mumbai">Mumbai</a>
-
+            <Link href="/blog">Blog</Link>
+            <Link href="/city">Select City</Link>
+            <Link href="/#gallery">Gallery</Link>
+            <Link href="/#reviews">Reviews</Link>
           </div>
-
         </div>
 
-        {/* CONTACT */}
         <div>
+          <h3 className="text-lg font-bold">Cities</h3>
 
-          <h3 className="text-lg font-bold">
-            Contact
-          </h3>
-
-          <div className="mt-5 flex flex-col gap-3 text-gray-400">
-
-            <a href="tel:+919602060414">
-              +91 9602060414
-            </a>
-
-            <a
-              href="https://wa.me/919602060414"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WhatsApp Us
-            </a>
-
-            <p>
-              Available 24×7 For Bookings
-            </p>
-
+          <div className="mt-4 flex flex-col gap-2 text-gray-400 sm:mt-5 sm:gap-3">
+            {cities.map((city) => (
+              <a key={city.slug} href={`/${city.slug}`}>
+                {city.name}
+              </a>
+            ))}
           </div>
-
         </div>
-
       </div>
 
-      {/* BOTTOM */}
-      <div className="mx-auto mt-16 border-t border-white/10 pt-6 text-center text-sm text-gray-500">
+      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-8">
+        <h3 className="text-lg font-bold">Contact</h3>
 
-        © 2026 Event Wala Dost. All rights reserved.
+        <div className="mt-5 flex flex-col gap-3 text-gray-400 sm:flex-row sm:items-center sm:gap-6">
+          <a href="tel:+919602060414" onClick={() => trackCallClick("footer_call")}>
+            +91 9602060414
+          </a>
 
+          <a
+            href="https://wa.me/919602060414"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("footer_whatsapp")}
+          >
+            WhatsApp Us
+          </a>
+
+          <p>Available 24x7 For Bookings</p>
+        </div>
       </div>
 
+      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-center text-sm text-gray-500">
+        Copyright 2026 Event Wala Dost. All rights reserved.
+      </div>
     </footer>
   );
 }
