@@ -19255,6 +19255,511 @@ export const blogPosts: BlogPost[] = [
       "wedding-engagement-decoration-chandigarh",
     ],
   },
+  {
+    slug: "how-to-choose-balloon-decorator-chandigarh",
+    title: "How to Choose a Balloon Decorator in Chandigarh Tricity",
+    excerpt:
+      "Use this practical checklist to compare balloon decorators in Chandigarh Tricity by portfolio quality, package inclusions, customisation, venue access and booking terms.",
+    category: "Chandigarh Decoration Guides",
+    featuredImage:
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop",
+    imageAlt:
+      "Professional balloon decoration setup in Chandigarh Tricity with backdrop and balloon arch",
+    author: "Event Wala Dost",
+    publishedDate: "2026-06-26",
+    updatedDate: "2026-06-26",
+    readingTime: "9 min read",
+    seoTitle: "How to Choose a Balloon Decorator in Chandigarh Tricity",
+    metaDescription:
+      "Learn how to choose a balloon decorator in Chandigarh, Mohali, Panchkula and Zirakpur by checking portfolio, quotation, venue planning and booking terms.",
+    keywords: [
+      "balloon decorator in Chandigarh",
+      "balloon decoration Chandigarh",
+      "birthday decorator Chandigarh",
+      "event decorator Chandigarh",
+      "balloon decoration in Mohali",
+      "balloon decoration in Panchkula",
+      "balloon decoration in Zirakpur",
+    ],
+    introduction:
+      "Choosing a balloon decorator in Chandigarh should start with the event type, venue access and the actual look you want to create. A useful guide compares design quality, package inclusions, customisation scope, quotation clarity and booking terms so the final setup feels realistic for the venue and date.",
+    contentSections: [
+      {
+        id: "why-choosing-the-right-decorator-matters",
+        heading: "Why choosing the right decorator matters",
+        level: 2,
+        paragraphs: [
+          "The right decorator can make the event feel visually balanced, while the wrong choice can create a setup that looks beautiful in photos but feels cramped, difficult to install or unclear in scope. In Chandigarh Tricity, room size, entry access, floor level, parking, hotel permission and setup timing all influence whether a design is practical.",
+          "For a local planning context, review /chandigarh, the Chandigarh birthday, anniversary, baby-shower, room, wedding and custom-theme services, and the Chandigarh price and service-area guides before comparing quotes.",
+        ],
+      },
+      {
+        id: "define-the-event-type-and-decoration-scope",
+        heading: "Define the event type and decoration scope",
+        level: 2,
+        paragraphs: [
+          "A birthday setup, anniversary room decoration, baby shower, wedding function, corporate event and custom theme each need a different mix of balloons, flowers, signage, stage styling, photo space and timing. A decorator who understands the event type will ask better questions before giving a package.",
+          "Start by clarifying whether you need a simple balloon backdrop, a full venue look or something in between. This helps compare decorators on the same basis instead of judging them only by the final visual mood.",
+        ],
+      },
+      {
+        id: "check-the-decorators-portfolio",
+        heading: "Check the decorator's portfolio",
+        level: 2,
+        paragraphs: [
+          "Look for recent work that matches your event style, venue type and expected scale. A portfolio should show whether the decorator can handle homes, apartments, hotel rooms, banquet halls, terrace setups, office events and larger venue concepts with a consistent visual approach.",
+          "You can ask whether the portfolio includes actual event work, styled shots, or a mix of both. That distinction matters when you are comparing quality and practical execution.",
+        ],
+      },
+      {
+        id: "confirm-whether-reference-images-are-illustrative-or-actual-work",
+        heading: "Confirm whether reference images are illustrative or actual work",
+        level: 2,
+        paragraphs: [
+          "A useful decorator should explain whether a reference image is an inspiration board, a sample concept or a previous installation. That helps you understand whether the design is truly repeatable, or whether it needs to be adapted to your space, budget and venue rules.",
+          "For large or themed setups, ask to see actual work that resembles your venue shape, event style and overall scale. This reduces surprises later in the planning process.",
+        ],
+      },
+      {
+        id: "compare-quotation-inclusions-not-just-the-final-amount",
+        heading: "Compare quotation inclusions, not just the final amount",
+        level: 2,
+        paragraphs: [
+          "A quotation should clearly state what is included: balloons, backdrop, flowers, cake-table styling, entrance decor, name or age signage, lighting, props, setup, transport and removal. The final amount can look attractive, but the real value depends on what the package actually contains.",
+          "A strong decorator will explain what is standard, what is optional and what can change because of venue access or last-minute design requirements.",
+        ],
+      },
+      {
+        id: "confirm-backdrop-balloon-flower-cake-table-and-entrance-coverage",
+        heading: "Confirm backdrop, balloon, flower, cake-table and entrance inclusions",
+        level: 2,
+        paragraphs: [
+          "For many events, the setup is judged by the backdrop, balloon arch, flower elements, cake table and entrance moment. Ask whether these elements are part of the package, and whether the decorator will size them to the actual room or venue instead of using one standard layout across all spaces.",
+          "In Chandigarh, Mohali, Panchkula and Zirakpur, layout details matter because a setup that fits one hall may feel too small or too dense in another venue.",
+        ],
+      },
+      {
+        id: "confirm-personalisation-for-names-age-and-messages",
+        heading: "Confirm personalisation such as name, age and event message",
+        level: 2,
+        paragraphs: [
+          "Personalised signage, age numbers, names, event messages and theme details should be confirmed early. This helps ensure the design is not only beautiful but also aligned with the celebration purpose.",
+          "Ask how personalised text is handled and whether the decorator needs the wording in advance so the final setup stays clear and readable.",
+        ],
+      },
+      {
+        id: "share-venue-photographs-and-dimensions",
+        heading: "Share venue photographs and dimensions",
+        level: 2,
+        paragraphs: [
+          "Before booking, send photographs of the room, wall space, entrance area, stage area or outdoor setup. If possible, share room width, height and the placement of furniture or equipment so the decorator can judge scale more accurately.",
+          "The more accurate the venue information, the easier it is to compare decorators fairly and avoid design changes on short notice.",
+        ],
+      },
+      {
+        id: "check-home-hotel-and-banquet-permissions",
+        heading: "Home, hotel and banquet venue permissions",
+        level: 2,
+        paragraphs: [
+          "Some venues need advance permission for decor, wall fixing, entry access, lift use, parking, setup time or material movement. These details often affect what a decorator can actually install and how quickly the setup can be completed.",
+          "A dealer who asks about venue permissions is usually more prepared than one who assumes each property will allow the same setup.",
+        ],
+      },
+      {
+        id: "confirm-setup-completion-time",
+        heading: "Confirm setup completion time",
+        level: 2,
+        paragraphs: [
+          "Ask when the decoration team needs to arrive and when the setup should be fully completed. This matters for home functions, hotel rooms, banquet halls and events with strict event start times.",
+          "A realistic setup window is as valuable as the visual design because it protects the decor from being rushed or partially installed.",
+        ],
+      },
+      {
+        id: "check-cancellation-rescheduling-and-material-terms",
+        heading: "Check cancellation, rescheduling and custom-material terms",
+        level: 2,
+        paragraphs: [
+          "Booking terms should explain what happens if the date changes, the venue changes, or the design scope is revised. For custom signs, printed props, floral materials or special balloon selections, ask whether the items are reusable, replaceable or non-refundable.",
+          "Good communication around these terms reduces confusion and gives you more control over the final booking.",
+        ],
+      },
+      {
+        id: "confirm-payment-and-written-booking-details",
+        heading: "Confirm payment and written booking details",
+        level: 2,
+        paragraphs: [
+          "A clear booking confirmation should include the event date, venue, theme direction, package scope, setup time, payment terms and contact details. A professional decorator should be able to explain the booking process in writing rather than relying only on chat messages.",
+          "Written confirmation also helps you compare quotes fairly when you are evaluating a balloon decorator in Chandigarh or a birthday decorator Chandigarh team for a home or venue event.",
+        ],
+      },
+      {
+        id: "same-day-service-subject-to-availability",
+        heading: "Same-day service subject to availability",
+        level: 2,
+        paragraphs: [
+          "Selected simple balloon-based setups may sometimes be possible on short notice, depending on team schedule, venue access and material availability. This is not guaranteed and should be confirmed only after the event date, venue and scope are shared.",
+          "For urgent planning, clarify whether the request is for a compact room setup or a larger venue decoration before assuming same-day support is possible.",
+        ],
+      },
+      {
+        id: "questions-to-ask-before-booking",
+        heading: "Questions to ask before booking",
+        level: 2,
+        paragraphs: [
+          "Ask how many team members will be involved, what is included in the setup, whether the design can be adjusted to your venue, how long the installation will take, what happens if the venue access changes, and whether the decorator has worked on similar spaces recently.",
+          "A practical decorator should also ask about your venue photographs, event time and whether the setup needs to support guest movement, photography or a stage display.",
+        ],
+      },
+      {
+        id: "warning-signs-to-avoid",
+        heading: "Warning signs to avoid",
+        level: 2,
+        paragraphs: [
+          "Be careful with vague package descriptions, large price gaps without clear reasons, copied images presented as original work, no venue questions, no setup-time confirmation and unclear change terms. A decorator who skips the practical questions may not be ready for the actual booking experience.",
+          "You should also avoid any service that promises a full look without checking the venue dimensions, permissions and delivery window.",
+        ],
+      },
+      {
+        id: "decoration-cost-factors-without-invented-prices",
+        heading: "Decoration cost factors without invented prices",
+        level: 2,
+        paragraphs: [
+          "The cost of balloon decoration Chandigarh work depends on venue size, balloon quantity, backdrop scale, floral or prop additions, custom signs, lighting, transport, team size, setup duration and how much the design needs to be adapted to the site. A small room setup and a larger banquet setup are not priced the same way.",
+          "Use the Chandigarh price guide and service-area guide for broader context, then request a quotation tailored to your exact location and venue.",
+        ],
+      },
+      {
+        id: "chandigarh-tricity-service-areas",
+        heading: "Chandigarh Tricity service areas",
+        level: 2,
+        paragraphs: [
+          "Local planning often includes Chandigarh, Mohali, Panchkula and Zirakpur, but service availability can also depend on the exact venue, access time, parking and travel distance. A decorator should confirm the location and setup window before finalising the booking.",
+          "If your event is in a specific sector, area or nearby location, share the full address and venue photographs so the team can check the practical scope before you commit.",
+        ],
+      },
+      {
+        id: "booking-checklist",
+        heading: "Booking checklist",
+        level: 2,
+        paragraphs: [
+          "Before booking, collect the event type, date, venue address, venue photographs, room or stage measurements, preferred colours, reference design, guest count, setup deadline, budget range and any venue permission requirements. This makes the quote easier to compare and helps the decorator plan the scope clearly.",
+          "A simple checklist also helps if you are comparing an event decorator Chandigarh team for a birthday, anniversary or room-decoration request.",
+        ],
+      },
+      {
+        id: "final-cta-for-chandigarh-bookings",
+        heading: "Need help planning decoration in Chandigarh Tricity?",
+        level: 2,
+        paragraphs: [
+          "Share your event type, venue photographs, event date, preferred theme and budget range for a customised quotation. The setup can then be planned around your real venue, access conditions and timing rather than a generic package.",
+          "Use the Check Availability and WhatsApp options to share your details and confirm whether the setup is practical for your Chandigarh Tricity date.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "How do I choose a balloon decorator in Chandigarh?",
+        answer:
+          "Compare portfolio quality, package inclusions, venue understanding, setup timing, communication clarity and whether the decorator asks practical questions about your location and access before confirming the booking.",
+      },
+      {
+        question: "Should I focus on price or package inclusions?",
+        answer:
+          "Focus on both. A lower quote can still leave out important items such as backdrop size, flowers, cake-table styling, lighting, setup or venue access planning.",
+      },
+      {
+        question: "Can I book balloon decoration in Mohali, Panchkula or Zirakpur?",
+        answer:
+          "Yes, subject to event date, travel, access, parking and venue permission. Share the exact venue and setup time for a realistic availability check.",
+      },
+      {
+        question: "Is same-day decoration possible?",
+        answer:
+          "Same-day service may be possible for simple setups, but it depends on timing, materials, venue access and the overall decoration scope.",
+      },
+    ],
+    relatedServiceLinks: [
+      {
+        title: "Birthday Decoration in Chandigarh",
+        href: "/chandigarh/services/birthday-decoration",
+      },
+      {
+        title: "Anniversary Decoration in Chandigarh",
+        href: "/chandigarh/services/anniversary-decoration",
+      },
+      {
+        title: "Room Decoration in Chandigarh",
+        href: "/chandigarh/services/room-decoration",
+      },
+      {
+        title: "Wedding Decoration in Chandigarh",
+        href: "/chandigarh/services/wedding-decoration",
+      },
+      {
+        title: "Custom Theme Decoration in Chandigarh",
+        href: "/chandigarh/services/custom-theme-decoration",
+      },
+    ],
+    relatedBlogSlugs: [
+      "balloon-decoration-price-chandigarh",
+      "balloon-decoration-service-areas-chandigarh",
+      "same-day-balloon-decoration-chandigarh",
+      "birthday-decoration-ideas-at-home-chandigarh",
+    ],
+  },
+  {
+    slug: "proposal-decoration-jaipur",
+    title: "Proposal Decoration in Jaipur: Romantic Room, Rooftop and Surprise Ideas",
+    excerpt:
+      "Explore proposal decoration ideas in Jaipur for bedrooms, hotel rooms, rooftops and private venues with balloons, flowers, lights and customised messages.",
+    category: "Jaipur Decoration Guides",
+    featuredImage:
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1600&auto=format&fit=crop",
+    imageAlt:
+      "Romantic proposal decoration in Jaipur with balloons, flowers and personalised backdrop",
+    author: "Event Wala Dost",
+    publishedDate: "2026-06-26",
+    updatedDate: "2026-06-26",
+    readingTime: "10 min read",
+    seoTitle: "Proposal Decoration in Jaipur | Romantic Surprise Setup",
+    metaDescription:
+      "Plan romantic proposal decoration in Jaipur with room, rooftop and private venue setups using balloons, flowers, lights, photographs and personalised signs.",
+    keywords: [
+      "proposal decoration Jaipur",
+      "romantic proposal decoration in Jaipur",
+      "room decoration for proposal Jaipur",
+      "rooftop proposal decoration Jaipur",
+      "surprise proposal setup Jaipur",
+      "proposal balloon decoration Jaipur",
+    ],
+    introduction:
+      "Proposal decoration planning in Jaipur works best when the setup matches the venue, weather, access and personal style. The aim is to create a romantic moment that feels thoughtful and easy to photograph while remaining practical for the actual space and date.",
+    contentSections: [
+      {
+        id: "planning-proposal-decoration-in-jaipur",
+        heading: "Planning proposal decoration in Jaipur",
+        level: 2,
+        paragraphs: [
+          "A proposal setup in Jaipur should be planned around the venue type, guest presence, privacy, weather, setup time and the message you want to share. Room proposals, rooftop proposals, villa surprises and private venue setups all require different levels of lighting, access and movement planning.",
+          "For wider planning context, review /jaipur, /jaipur/services/anniversary-decoration, /jaipur/services/room-decoration, /jaipur/services/custom-theme-decoration, and the related proposal guides /blog/proposal-decoration-ideas, /blog/proposal-room-decoration, /blog/rooftop-proposal-decoration and /blog/proposal-decoration-cost.",
+        ],
+      },
+      {
+        id: "romantic-bedroom-proposal-setup",
+        heading: "Romantic bedroom proposal setup",
+        level: 2,
+        paragraphs: [
+          "A bedroom proposal setup can focus on a soft backdrop, balloon clusters, fairy lights, flowers, a personalised message sign and a small ring or gift area. The design should feel intimate rather than overly crowded, especially if the room space is compact.",
+          "A good bedroom setup leaves enough room for the couple to move, take photographs and share a quiet moment without blocking doors or windows.",
+        ],
+      },
+      {
+        id: "living-room-proposal-decoration",
+        heading: "Living-room proposal decoration",
+        level: 2,
+        paragraphs: [
+          "For a living-room surprise, use one main visual focal point such as a balloon arch, floral backdrop, framed message, photo wall or soft lighting corner. This keeps the room feeling elegant while still giving the event a clear visual centre.",
+          "A living room proposal can be made more personal with a memory wall, a few framed photographs and a message placed near the seating area or photo spot.",
+        ],
+      },
+      {
+        id: "hotel-room-proposal-planning-and-permission",
+        heading: "Hotel-room proposal planning and permission",
+        level: 2,
+        paragraphs: [
+          "Hotel-room proposals need planning around room access, check-in timing, decoration permission, placement of props and safe movement inside the room. The decorator should confirm whether the setup will use balloons, flowers, lights, candles, signage, or any wall or furniture changes.",
+          "A practical plan also accounts for luggage space, entry access and any rules around flowers, candles or sound so the surprise feels polished without creating a problem for the hotel staff.",
+        ],
+      },
+      {
+        id: "rooftop-and-terrace-proposal-setup",
+        heading: "Rooftop and terrace proposal setup",
+        level: 2,
+        paragraphs: [
+          "Rooftop proposal decoration Jaipur setups often work best when they balance lighting, wind, seating and the view. A simple backdrop, soft lighting, a few floral details and a clear ring or gift display can feel more elegant than a highly crowded setup.",
+          "Because rooftops can be exposed to weather, ask how supporting structures, lighting and wind-safe placement are handled before finalising the design.",
+        ],
+      },
+      {
+        id: "cafe-and-restaurant-proposal-planning",
+        heading: "Cafe and restaurant proposal planning",
+        level: 2,
+        paragraphs: [
+          "Cafe and restaurant venues can work well for intimate proposal setups when the table or corner is arranged carefully. The setup should not reduce comfort for other guests or interfere with service flow.",
+          "A simple backdrop, a small table arrangement and a personalised sign can feel more special than an oversized installation that changes the venue atmosphere.",
+        ],
+      },
+      {
+        id: "private-villa-or-farmhouse-proposal-setup",
+        heading: "Private villa or farmhouse proposal setup",
+        level: 2,
+        paragraphs: [
+          "Private villa and farmhouse proposal decor can support larger installations, layered lighting, photo zones and more customised entry moments. The scale should still match the layout and the overall mood of the event.",
+          "These venues often give you more creative space, but they also need more planning around entry, parking, outdoor lighting and weather backup.",
+        ],
+      },
+      {
+        id: "personalised-will-you-marry-me-backdrop",
+        heading: "Personalised “Will You Marry Me?” backdrop",
+        level: 2,
+        paragraphs: [
+          "A personalised backdrop can be as simple as a soft floral wall, balloon arch, floral frame or a message board with the couple's names, date or a short line. The visual should feel meaningful, not overfilled.",
+          "Ask whether the message is printed, hand-painted, or created using a sign board, so you know how the final look will appear in photographs.",
+        ],
+      },
+      {
+        id: "balloon-and-flower-decoration",
+        heading: "Balloon and flower decoration",
+        level: 2,
+        paragraphs: [
+          "Balloons and flowers can be combined to create a romantic look that feels warm and polished without becoming too busy. Use one main colour direction and let the flowers or balloon clusters frame the photo zone, ring display or seating area.",
+          "In a room-based plan, less can feel more. In a rooftop or villa plan, you may want a slightly wider visual frame to balance the larger surrounding space.",
+        ],
+      },
+      {
+        id: "fairy-lights-and-safe-led-candle-style-decor",
+        heading: "Fairy lights and safe LED candle-style decor",
+        level: 2,
+        paragraphs: [
+          "Fairy lights and safe LED candle-style decor can add warmth without creating safety concerns for a private proposal. They work especially well in evening setups, hotel rooms and rooftop plans where soft lighting makes the moment more intimate.",
+          "Ask how lighting will be placed so the setup remains safe, practical and visible in photographs.",
+        ],
+      },
+      {
+        id: "photograph-and-memory-wall-setup",
+        heading: "Photograph and memory-wall setup",
+        level: 2,
+        paragraphs: [
+          "A memory wall or photo display can make the proposal feel more personal by referencing the couple's journey, shared place or favourite photographs. This works best when it remains clean and easy to photograph.",
+          "A compact display can be placed near the entrance, beside the seating area or behind the main backdrop so it supports the moment without dominating it.",
+        ],
+      },
+      {
+        id: "ring-cake-and-gift-presentation",
+        heading: "Ring, cake and gift presentation",
+        level: 2,
+        paragraphs: [
+          "The ring box, cake table or small gift display should be placed where it can be seen clearly but not interrupt the flow of the room. The placement matters more than the number of elements you include.",
+          "A simple arrangement often feels more elegant than a larger display that competes with the backdrop or the couple's position.",
+        ],
+      },
+      {
+        id: "simple-vs-premium-proposal-setup",
+        heading: "Simple vs premium proposal setup",
+        level: 2,
+        paragraphs: [
+          "A simple proposal setup may use a soft backdrop, flowers, a message sign and lighting. A premium setup can add more styling, a larger setup area, additional florals, a custom backdrop or a multi-zone display.",
+          "The best option depends on the venue, the kind of surprise you want to create and how much space is available for the design to breathe.",
+        ],
+      },
+      {
+        id: "indoor-vs-rooftop-comparison",
+        heading: "Indoor vs rooftop comparison",
+        level: 2,
+        paragraphs: [
+          "Indoor setups offer more control over lighting, privacy and room layout. Rooftop or terrace setups can feel more dramatic but need stronger planning around weather, access, seating and safe installation.",
+          "If you are comparing indoor and rooftop options, make sure the decorator has thought through the real conditions of the place rather than only the look of the reference photo.",
+        ],
+      },
+      {
+        id: "jaipur-venue-access-and-weather-considerations",
+        heading: "Jaipur venue-access and weather considerations",
+        level: 2,
+        paragraphs: [
+          "Jaipur locations can vary in access, parking, entry timing and weather exposure, especially for outdoor or terrace spaces. Ask whether the same design can be installed safely at the exact time you need it and whether the venue permits the planned setup.",
+          "A decorator who asks about access and climate is more likely to create a proposal setup that feels effortless in real life.",
+        ],
+      },
+      {
+        id: "same-day-setup-subject-to-availability",
+        heading: "Same-day setup subject to availability",
+        level: 2,
+        paragraphs: [
+          "Selected simple proposal setups may be possible on short notice, depending on venue access, available materials, team schedule and the amount of customisation required. This should be treated as conditional rather than automatic.",
+          "If the proposal is time-sensitive, share the location, venue photographs, date and preferred setup style early so the team can confirm what is practical.",
+        ],
+      },
+      {
+        id: "proposal-decoration-pricing-factors",
+        heading: "Proposal-decoration pricing factors",
+        level: 2,
+        paragraphs: [
+          "Proposal decoration pricing depends on the venue type, room size, decor scale, balloon and flower work, lighting, custom signage, photography support, transport, setup time and the amount of personalisation involved. A basic room setup and a premium rooftop or villa setup should not be compared as if they were the same package.",
+          "Use the Jaipur balloon-decoration price guide and the related proposal guides for context, then request a quote based on your actual venue and preferred style.",
+        ],
+      },
+      {
+        id: "jaipur-booking-checklist",
+        heading: "Jaipur booking checklist",
+        level: 2,
+        paragraphs: [
+          "Before booking, share the Jaipur location, venue photographs, proposal date, preferred colours, message text, expected setup time, room or rooftop measurements and budget range. This helps the decorator suggest an idea that feels personal rather than generic.",
+          "If you are planning a surprise, also confirm whether the venue allows setup before the guest arrives and whether the entry access is practical for the team.",
+        ],
+      },
+      {
+        id: "common-planning-mistakes",
+        heading: "Common planning mistakes",
+        level: 2,
+        paragraphs: [
+          "Common mistakes include choosing a setup that is too large for the room, ignoring venue access, missing weather planning for rooftop spaces, overloading the decor with too many elements and not confirming the message or placement of the ring or gift area.",
+          "A better approach is to keep the setup focused, clear and aligned with the couple's style so the proposal feels natural and easy to enjoy.",
+        ],
+      },
+      {
+        id: "final-cta-for-jaipur-proposals",
+        heading: "Planning a proposal surprise in Jaipur?",
+        level: 2,
+        paragraphs: [
+          "Share your Jaipur location, venue photographs, proposal date, preferred colours, message and budget range for a personalised setup. The plan can then be built around your real venue instead of a one-size-fits-all concept.",
+          "Use the Plan Proposal Setup and WhatsApp options to send your details and check whether the setup is practical for your date.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "What is the best proposal decoration style in Jaipur?",
+        answer:
+          "The best style depends on the venue and the mood you want. A romantic bedroom setup, a rooftop backdrop and a private villa design can all feel beautiful when the decor is scaled correctly and kept personal.",
+      },
+      {
+        question: "Can proposal decoration be planned for a hotel room?",
+        answer:
+          "Yes. Hotel-room proposal plans can be arranged when the venue rules, access timing and room space are confirmed in advance.",
+      },
+      {
+        question: "Is rooftop proposal decoration practical in Jaipur?",
+        answer:
+          "It can be, if the venue access, weather, lighting and setup timing are checked carefully. Rooftop setups usually need a little more planning than a compact room surprise.",
+      },
+      {
+        question: "Can I add a personalised message or memory wall?",
+        answer:
+          "Yes. A personalised backdrop, memory wall or message sign can be included when the wording, placement and size are confirmed early.",
+      },
+    ],
+    relatedServiceLinks: [
+      {
+        title: "Anniversary Decoration in Jaipur",
+        href: "/jaipur/services/anniversary-decoration",
+      },
+      {
+        title: "Room Decoration in Jaipur",
+        href: "/jaipur/services/room-decoration",
+      },
+      {
+        title: "Custom Theme Decoration in Jaipur",
+        href: "/jaipur/services/custom-theme-decoration",
+      },
+    ],
+    relatedBlogSlugs: [
+      "proposal-decoration-ideas",
+      "proposal-room-decoration",
+      "rooftop-proposal-decoration",
+      "proposal-decoration-cost",
+      "balloon-decoration-price-jaipur",
+    ],
+  },
 ];
 
 export function getAllBlogPosts() {
