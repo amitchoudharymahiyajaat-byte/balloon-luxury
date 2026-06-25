@@ -7,6 +7,45 @@ import { trackExitOfferClaim, trackWhatsAppClick } from "../../lib/tracking";
 const whatsappUrl =
   "https://wa.me/919602060414?text=Hi,%20I%20want%20to%20claim%20the%20Rs.%20500%20discount";
 
+function CelebrationBadge() {
+  return (
+    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-yellow-100 via-pink-50 to-purple-100 shadow-[0_18px_40px_rgba(236,72,153,0.18)] ring-1 ring-white">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 64 64"
+        className="h-10 w-10"
+        fill="none"
+      >
+        <path
+          d="M23 31c-5.2 0-9-4.1-9-9.7C14 15.9 17.7 12 23 12s9 3.9 9 9.3C32 26.9 28.2 31 23 31Z"
+          stroke="#111827"
+          strokeWidth="2.6"
+        />
+        <path
+          d="M41 31c-5.2 0-9-4.1-9-9.7C32 15.9 35.7 12 41 12s9 3.9 9 9.3C50 26.9 46.2 31 41 31Z"
+          stroke="#9d4edd"
+          strokeWidth="2.6"
+        />
+        <path
+          d="M32 39c-5.5 0-9.5-4.3-9.5-10.1 0-5.6 4-9.8 9.5-9.8s9.5 4.2 9.5 9.8C41.5 34.7 37.5 39 32 39Z"
+          stroke="#f97316"
+          strokeWidth="2.8"
+        />
+        <path d="M23 31c1.2 5 4.4 9.8 9 14" stroke="#111827" strokeWidth="2" />
+        <path d="M41 31c-1.2 5-4.4 9.8-9 14" stroke="#9d4edd" strokeWidth="2" />
+        <path d="M32 39v9" stroke="#f97316" strokeWidth="2" />
+        <path d="M28 50h8" stroke="#111827" strokeWidth="2" strokeLinecap="round" />
+        <path
+          d="M53 13v7M49.5 16.5h7M12 38v5M9.5 40.5h5"
+          stroke="#ec4899"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+        />
+      </svg>
+    </div>
+  );
+}
+
 export default function ExitIntentPopup() {
   const [open, setOpen] = useState(false);
   const hasShownRef = useRef(false);
@@ -97,29 +136,49 @@ export default function ExitIntentPopup() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="exit-intent-title"
-            className="w-full max-w-md overflow-hidden rounded-[28px] border border-white/70 bg-white p-6 text-center shadow-2xl sm:p-7"
+            className="relative w-full max-w-xl overflow-hidden rounded-[28px] border border-pink-100 bg-white p-6 text-center shadow-[0_30px_90px_rgba(15,23,42,0.28)] ring-1 ring-white/70 sm:p-8"
             initial={{ opacity: 0, y: 24, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.28, ease: "easeOut" }}
           >
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 text-2xl">
-              !
-            </div>
+            <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent" />
+
+            <button
+              type="button"
+              onClick={closePopup}
+              className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-xl leading-none text-gray-500 shadow-sm transition hover:border-gray-300 hover:text-gray-950 active:scale-95"
+              aria-label="Close offer popup"
+            >
+              x
+            </button>
+
+            <CelebrationBadge />
 
             <h2
               id="exit-intent-title"
-              className="text-3xl font-black tracking-tight text-gray-950"
+              className="mx-auto mt-5 max-w-md text-3xl font-black leading-tight md:text-4xl"
+              style={{
+                background:
+                  "linear-gradient(90deg, #ff6b6b 0%, #ffa500 28%, #4ecdc4 56%, #9d4edd 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
             >
-              Wait
+              Wait! Your Celebration Just Got Better
             </h2>
 
-            <p className="mx-auto mt-3 max-w-sm text-lg font-bold leading-snug text-gray-900">
+            <p className="mt-5 text-xs font-bold uppercase tracking-[0.28em] text-purple-600">
+              Limited-Time Offer
+            </p>
+
+            <p className="mx-auto mt-3 max-w-sm rounded-2xl border border-yellow-200 bg-yellow-50 px-4 py-3 text-xl font-black leading-snug text-gray-950 shadow-inner">
               Get Flat Rs. 500 OFF Today on Balloon Decoration Booking
             </p>
 
-            <p className="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-gray-500">
-              Limited time offer for same day decoration bookings.
+            <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-gray-500">
+              Book your balloon decoration today and claim this limited-time
+              offer on WhatsApp.
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -132,7 +191,7 @@ export default function ExitIntentPopup() {
                   trackWhatsAppClick("exit_intent_popup_claim");
                   closePopup();
                 }}
-                className="flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                className="flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-green-500 to-emerald-600 px-5 py-3.5 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(16,185,129,0.28)] transition hover:scale-[1.02] hover:shadow-[0_18px_38px_rgba(16,185,129,0.34)] active:scale-[0.98]"
               >
                 Claim on WhatsApp
               </a>
@@ -140,7 +199,7 @@ export default function ExitIntentPopup() {
               <button
                 type="button"
                 onClick={closePopup}
-                className="flex flex-1 items-center justify-center rounded-full border border-gray-200 bg-gray-50 px-5 py-3 text-sm font-semibold text-gray-700 transition hover:bg-gray-100"
+                className="flex flex-1 items-center justify-center rounded-full border border-gray-200 bg-gray-50 px-5 py-3.5 text-sm font-semibold text-gray-800 transition hover:border-gray-300 hover:bg-gray-100 active:scale-[0.98]"
               >
                 No Thanks
               </button>
