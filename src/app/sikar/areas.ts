@@ -1,0 +1,18 @@
+export const sikarAreas = [
+  "Sikar City",
+  "Piprali Road",
+  "Nawalgarh Road",
+  "Jaipur Road",
+  "Fatehpur Road",
+  "Rani Sati Road",
+  "Station Road",
+  "Bajaj Road",
+  "Devipura",
+  "Radhakishanpura",
+  "Shivsinghpura",
+  "Sanwali Road",
+  "Palsana Road",
+  "Industrial Area",
+  "Court Road",
+  "Silver Jubilee Road",
+] as const;

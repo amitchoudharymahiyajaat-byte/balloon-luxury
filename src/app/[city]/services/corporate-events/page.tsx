@@ -26,8 +26,8 @@ export async function generateMetadata({
   const cityName = formatCityName(city);
 
   return createPageMetadata({
-    title: `Corporate Event Decoration in ${cityName} | Office & Conference Decor`,
-    description: `Book corporate event decoration in ${cityName} for office celebrations, meetings, conferences, product launches, annual events and banquet hall corporate gatherings.`,
+    title: `Corporate Event Decoration in ${cityName} | Office & Brand Events`,
+    description: `Book corporate event decoration in ${cityName} for office celebrations, brand events, conferences and product launches with elegant styling.`,
     path: `/${city}/services/corporate-events`,
     keywords: [
       `corporate event decoration in ${cityName}`,

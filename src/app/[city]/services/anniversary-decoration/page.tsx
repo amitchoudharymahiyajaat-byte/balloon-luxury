@@ -4,6 +4,7 @@ import { createPageMetadata } from "../../../../lib/seo";
 
 const cityNames: Record<string, string> = {
   jaipur: "Jaipur",
+  sikar: "Sikar",
   delhi: "Delhi",
   "delhi-ncr": "Delhi NCR",
   gurgaon: "Gurgaon",
@@ -30,8 +31,8 @@ export async function generateMetadata({
   const cityName = formatCityName(city);
 
   return createPageMetadata({
-    title: `Anniversary Decoration in ${cityName} | Romantic Room Decor`,
-    description: `Book anniversary decoration in ${cityName} for romantic room setups, hotel surprises, proposals and couple celebrations with balloons, flowers, candles and lights.`,
+    title: `Anniversary Decoration in ${cityName} | Romantic Surprise Setup`,
+    description: `Book anniversary decoration in ${cityName} for romantic room setups, hotel surprises, proposals and couple celebrations with balloons, flowers, candles and light styling.`,
     path: `/${city}/services/anniversary-decoration`,
     keywords: [
       `anniversary decoration in ${cityName}`,

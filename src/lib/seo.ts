@@ -7,6 +7,7 @@ export const ogImage = "/images/hero.jpg";
 
 export const cities = [
   { slug: "jaipur", name: "Jaipur" },
+  { slug: "sikar", name: "Sikar" },
   { slug: "delhi-ncr", name: "Delhi NCR" },
   { slug: "gurgaon", name: "Gurgaon" },
   { slug: "mumbai", name: "Mumbai" },

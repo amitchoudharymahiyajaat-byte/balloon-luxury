@@ -4,12 +4,14 @@ import { useState } from "react";
 
 export default function FAQ({
   city = "",
+  faqs,
 }: {
   city?: string;
+  faqs?: Array<{ question: string; answer: string }>;
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqs = [
+  const defaultFaqs = [
     {
       question: `Do you provide same day balloon decoration services in ${
         city || "your city"
@@ -47,11 +49,13 @@ export default function FAQ({
     },
   ];
 
+  const faqItems = faqs ?? defaultFaqs;
+
   // FAQ Schema for SEO
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
+    mainEntity: faqItems.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
@@ -102,7 +106,7 @@ export default function FAQ({
 
           {/* FAQ LIST */}
           <div className="space-y-3">
-            {faqs.map((faq, index) => {
+            {faqItems.map((faq, index) => {
               const isOpen = openIndex === index;
 
               return (

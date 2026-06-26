@@ -26,8 +26,8 @@ export async function generateMetadata({
   const cityName = formatCityName(city);
 
   return createPageMetadata({
-    title: `Baby Shower Decoration in ${cityName} | Welcome Baby Decor`,
-    description: `Book baby shower decoration in ${cityName} for welcome baby celebrations, godh bharai, naming ceremonies and newborn homecoming setups with balloons, backdrops and customised themes.`,
+    title: `Baby Shower Decoration in ${cityName} | Balloon Theme Setup`,
+    description: `Book baby shower decoration in ${cityName} for welcome baby celebrations, naming ceremonies and soft pastel themes with customised balloon backdrops and decor.`,
     path: `/${city}/services/baby-shower-decoration`,
     keywords: [
       `baby shower decoration in ${cityName}`,

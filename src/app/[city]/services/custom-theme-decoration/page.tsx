@@ -26,8 +26,8 @@ export async function generateMetadata({
   const cityName = formatCityName(city);
 
   return createPageMetadata({
-    title: `Custom Theme Decoration in ${cityName} | Banquet Hall Decor`,
-    description: `Book custom theme and banquet hall decoration in ${cityName} for weddings, birthdays, corporate events and large celebrations with personalised stages, backdrops and venue styling.`,
+    title: `Custom Theme Decoration in ${cityName} | Personalised Event Setup`,
+    description: `Book custom theme decoration in ${cityName} for weddings, birthdays and corporate events with personalised stages, backdrops and venue styling.`,
     path: `/${city}/services/custom-theme-decoration`,
     keywords: [
       `custom theme decoration in ${cityName}`,

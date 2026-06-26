@@ -474,6 +474,13 @@ export const cityMedia: Partial<Record<CitySlug, CityMediaConfig>> = {
       alt: "Balloon decoration services in Jaipur",
     },
   },
+  sikar: {
+    hero: {
+      src: "/images/hero/home-hero-balloon-decoration.webp",
+      mobileSrc: "/images/hero/home-hero-balloon-decoration-mobile.webp",
+      alt: "Balloon decoration services available in Sikar",
+    },
+  },
   ahmedabad: {
     hero: {
       src: "/images/city-hero/ahmedabad-hero-balloon-decoration.webp",

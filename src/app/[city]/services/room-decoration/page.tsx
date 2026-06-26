@@ -26,8 +26,8 @@ export async function generateMetadata({
   const cityName = formatCityName(city);
 
   return createPageMetadata({
-    title: `Room & Hotel Decoration in ${cityName} | Birthday & Romantic Room Decor`,
-    description: `Book room and hotel decoration in ${cityName} for birthdays, anniversaries, proposals, honeymoon stays and romantic surprises with customised balloon, flower and light setups.`,
+    title: `Room Decoration in ${cityName} | Birthday & Anniversary Surprise`,
+    description: `Book room decoration in ${cityName} for birthdays, anniversaries, proposals and romantic surprises with balloon, flower and light styling.`,
     path: `/${city}/services/room-decoration`,
     keywords: [
       `room decoration in ${cityName}`,

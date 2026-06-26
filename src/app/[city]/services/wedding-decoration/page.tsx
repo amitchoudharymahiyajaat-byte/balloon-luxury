@@ -26,8 +26,8 @@ export async function generateMetadata({
   const cityName = formatCityName(city);
 
   return createPageMetadata({
-    title: `Wedding & Engagement Decoration in ${cityName} | Stage & Backdrop Decor`,
-    description: `Book wedding and engagement decoration in ${cityName} for ring ceremonies, wedding stages, haldi, mehndi and sangeet with customised backdrops, flowers and lighting.`,
+    title: `Wedding Decoration in ${cityName} | Haldi, Mehendi & Engagement`,
+    description: `Book wedding decoration in ${cityName} for haldi, mehendi, engagement and wedding celebrations with stage, entrance and backdrop styling.`,
     path: `/${city}/services/wedding-decoration`,
     keywords: [
       `wedding decoration in ${cityName}`,

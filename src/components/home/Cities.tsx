@@ -4,6 +4,7 @@ import { cities } from "../../lib/seo";
 
 const cityImages: Record<(typeof cities)[number]["slug"], string> = {
   jaipur: "/images/cities/jaipur-balloon-decoration.webp",
+  sikar: "/images/hero/home-hero-balloon-decoration.webp",
   "delhi-ncr": "/images/cities/delhi-ncr-balloon-decoration.webp",
   gurgaon: "/images/cities/gurgaon-balloon-decoration.webp",
   mumbai: "/images/cities/mumbai-balloon-decoration.webp",
@@ -20,6 +21,7 @@ const cityImages: Record<(typeof cities)[number]["slug"], string> = {
 
 const cityImageAlts: Record<(typeof cities)[number]["slug"], string> = {
   jaipur: "Balloon decoration services in Jaipur",
+  sikar: "Balloon decoration services available in Sikar",
   "delhi-ncr": "Balloon decoration services in Delhi NCR",
   gurgaon: "Balloon decoration services in Gurgaon",
   mumbai: "Balloon decoration services in Mumbai",

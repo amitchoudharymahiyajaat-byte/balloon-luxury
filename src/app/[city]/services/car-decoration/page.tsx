@@ -26,8 +26,8 @@ export async function generateMetadata({
   const cityName = formatCityName(city);
 
   return createPageMetadata({
-    title: `Car Boot Decoration in ${cityName} | Birthday & Romantic Car Surprise`,
-    description: `Book car boot decoration in ${cityName} for birthdays, anniversaries, proposals and romantic surprises with balloons, flowers, fairy lights and personalised setups.`,
+    title: `Car Decoration in ${cityName} | Wedding & Surprise Car Decor`,
+    description: `Book car decoration in ${cityName} for wedding surprises, romantic proposals and birthday arrivals with balloon, flower and light styling.`,
     path: `/${city}/services/car-decoration`,
     keywords: [
       `car boot decoration in ${cityName}`,
