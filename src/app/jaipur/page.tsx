@@ -26,13 +26,6 @@ const jaipurLocalBusinessSchema = {
   telephone: phoneNumber,
   description:
     "Premium balloon decoration services in Jaipur for birthdays, anniversaries, baby showers, romantic room decoration, hotel room decoration and surprise events.",
-  priceRange: "\u20B9\u20B9",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Jaipur",
-    addressRegion: "Rajasthan",
-    addressCountry: "IN",
-  },
   areaServed: ["Jaipur", ...jaipurAreas].map((area) => ({
     "@type": "Place",
     name: area,

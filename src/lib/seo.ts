@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { businessConfig } from "./business";
 
-export const siteUrl = "https://eventwaladost.com";
-export const siteName = "Event Wala Dost";
-export const phoneNumber = "+919602060414";
-export const ogImage = "/images/hero.jpg";
+export const siteUrl = businessConfig.siteUrl;
+export const siteName = businessConfig.siteName;
+export const phoneNumber = businessConfig.phoneNumber;
+export const ogImage = businessConfig.ogImage;
 
 export const cities = [
   { slug: "jaipur", name: "Jaipur" },
@@ -21,6 +22,18 @@ export const cities = [
   { slug: "chennai", name: "Chennai" },
   { slug: "kolkata", name: "Kolkata" },
 ] as const;
+
+export const supportedCities = cities;
+
+export type SupportedCitySlug = (typeof supportedCities)[number]["slug"];
+
+export function getSupportedCityName(slug: string) {
+  return supportedCities.find((city) => city.slug === slug)?.name;
+}
+
+export function getSupportedCityStaticParams() {
+  return supportedCities.map((city) => ({ city: city.slug }));
+}
 
 type PageMetadataInput = {
   title: string;
@@ -90,31 +103,12 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: siteName,
   description:
-    "Luxury balloon decoration services for birthdays, anniversaries, baby showers, proposals and surprise celebrations across India.",
+    "Luxury balloon decoration services for birthdays, anniversaries, baby showers, proposals and surprise celebrations across supported Event Wala Dost cities.",
   url: siteUrl,
   image: new URL(ogImage, siteUrl).toString(),
   telephone: phoneNumber,
-  priceRange: "INR 1,999+",
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "IN",
-  },
-  areaServed: cities.map((city) => ({
+  areaServed: supportedCities.map((city) => ({
     "@type": "City",
     name: city.name,
   })),
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
-    ],
-    opens: "00:00",
-    closes: "23:59",
-  },
 };

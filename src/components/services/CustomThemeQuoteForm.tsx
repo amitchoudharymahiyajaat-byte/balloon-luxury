@@ -1,5 +1,6 @@
 "use client";
 
+import { createWhatsAppUrl } from "../../lib/business";
 import { FormEvent } from "react";
 import { cities } from "../../lib/seo";
 import {
@@ -42,7 +43,7 @@ Message: ${formData.get("message")}`;
     trackWhatsAppClick("custom_theme_decoration_quote");
 
     window.open(
-      `https://wa.me/919602060414?text=${encodeURIComponent(message)}`,
+      createWhatsAppUrl(message),
       "_blank",
       "noopener,noreferrer",
     );
@@ -136,7 +137,7 @@ Message: ${formData.get("message")}`;
         </button>
 
         <a
-          href="https://wa.me/919602060414?text=Hi%2C%20I%20want%20custom%20theme%20decoration%20details"
+          href={createWhatsAppUrl("Hi, I want custom theme decoration details")}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackWhatsAppClick("custom_theme_decoration_contact")}

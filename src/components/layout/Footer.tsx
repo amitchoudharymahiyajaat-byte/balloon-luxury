@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { trackCallClick, trackWhatsAppClick } from "../../lib/tracking";
 import { cities } from "../../lib/seo";
+import { businessConfig, createWhatsAppUrl } from "../../lib/business";
 
 const footerServices = [
   { href: "/services/birthday-decoration", label: "Birthday Decoration" },
@@ -51,6 +52,7 @@ export default function Footer() {
             <Link href="/city">Select City</Link>
             <Link href="/#gallery">Gallery</Link>
             <Link href="/#reviews">Reviews</Link>
+            <Link href="/contact-us">Contact Us</Link>
           </div>
         </div>
 
@@ -72,14 +74,14 @@ export default function Footer() {
 
         <div className="mt-5 flex flex-col gap-3 text-gray-400 sm:flex-row sm:items-center sm:gap-6">
           <a
-            href="tel:+919602060414"
+            href={businessConfig.telHref}
             onClick={() => trackCallClick("footer_call")}
           >
-            +91 9602060414
+            {businessConfig.phoneDisplay}
           </a>
 
           <a
-            href="https://wa.me/919602060414"
+            href={createWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("footer_whatsapp")}
@@ -87,12 +89,28 @@ export default function Footer() {
             WhatsApp Us
           </a>
 
-          <p>Available 24x7 For Bookings</p>
+          <p>{businessConfig.availabilityLabel}</p>
         </div>
       </div>
 
-      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-center text-sm text-gray-500">
-        Copyright 2026 Event Wala Dost. All rights reserved.
+      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6">
+        <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
+          <Link href="/privacy-policy" className="transition hover:text-white">
+            Privacy Policy
+          </Link>
+          <Link href="/terms-and-conditions" className="transition hover:text-white">
+            Terms & Conditions
+          </Link>
+          <Link href="/cancellation-refund-policy" className="transition hover:text-white">
+            Cancellation & Refund
+          </Link>
+          <Link href="/contact-us" className="transition hover:text-white">
+            Contact Us
+          </Link>
+        </div>
+        <p className="mt-4 text-center text-sm text-gray-500">
+          Copyright 2026 Event Wala Dost. All rights reserved.
+        </p>
       </div>
     </footer>
   );

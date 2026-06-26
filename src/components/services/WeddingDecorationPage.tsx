@@ -1,3 +1,4 @@
+import { createWhatsAppUrl } from "../../lib/business";
 import Link from "next/link";
 import FallbackImage from "../home/FallbackImage";
 import {
@@ -226,7 +227,7 @@ export default function WeddingDecorationPage({
               Book This Decor
             </a>
             <a
-              href="https://wa.me/919602060414?text=Hi%2C%20I%20want%20to%20book%20wedding%20and%20engagement%20decoration"
+              href={createWhatsAppUrl("Hi, I want to book wedding and engagement decoration")}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full max-w-xs rounded-full border border-white/25 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition hover:border-yellow-300 hover:bg-yellow-300 hover:text-black sm:w-auto"

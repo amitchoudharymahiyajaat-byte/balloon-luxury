@@ -1,11 +1,12 @@
 "use client";
 
 import { trackWhatsAppClick } from "../../lib/tracking";
+import { createWhatsAppUrl } from "../../lib/business";
 
 export default function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/919602060414"
+      href={createWhatsAppUrl()}
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackWhatsAppClick("floating_whatsapp")}

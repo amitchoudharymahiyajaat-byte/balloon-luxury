@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { getCityHero, getCitySlug, getHomeHero } from "../../lib/cityMedia";
 import { trackBookingClick, trackWhatsAppClick } from "../../lib/tracking";
+import { createWhatsAppUrl } from "../../lib/business";
 
 export default function Hero({
   city = "India",
@@ -85,7 +86,7 @@ export default function Hero({
 
         <div className="mt-6 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4">
           <a
-            href="https://wa.me/919602060414"
+            href={createWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {

@@ -3,9 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { trackExitOfferClaim, trackWhatsAppClick } from "../../lib/tracking";
+import { createWhatsAppUrl } from "../../lib/business";
 
-const whatsappUrl =
-  "https://wa.me/919602060414?text=Hi,%20I%20want%20to%20claim%20the%20Rs.%20500%20discount";
+const whatsappUrl = createWhatsAppUrl(
+  "Hi, I want to claim the Rs. 500 discount"
+);
 
 function CelebrationBadge() {
   return (

@@ -44,15 +44,8 @@ export default function SikarPage() {
     url: `${siteUrl}/sikar`,
     image: new URL(ogImage, siteUrl).toString(),
     telephone: phoneNumber,
-    priceRange: "₹₹",
     description:
       "Custom balloon decoration services available in Sikar for birthdays, anniversaries, baby showers, romantic room surprises, wedding styling, banquet decoration and custom themed events.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Sikar",
-      addressRegion: "Rajasthan",
-      addressCountry: "IN",
-    },
     areaServed: sikarServiceAreas.map((area) => ({
       "@type": "Place",
       name: area,

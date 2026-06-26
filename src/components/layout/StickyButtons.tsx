@@ -5,6 +5,7 @@ import {
   trackCallClick,
   trackWhatsAppClick,
 } from "../../lib/tracking";
+import { businessConfig, createWhatsAppUrl } from "../../lib/business";
 
 export default function StickyButtons() {
   return (
@@ -12,7 +13,7 @@ export default function StickyButtons() {
       <div className="pb-[env(safe-area-inset-bottom)]">
         <div className="flex gap-1.5">
           <a
-            href="tel:+919602060414"
+            href={businessConfig.telHref}
             onClick={() => trackCallClick("sticky_buttons_call")}
             className="group flex min-h-12 min-w-0 flex-1 basis-0 items-center justify-center gap-1 rounded-2xl border border-white/10 bg-neutral-950 px-1.5 py-3 text-[11px] font-bold text-white shadow-[0_8px_20px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-0.5 active:scale-[0.97] active:bg-neutral-800 sm:text-sm"
           >
@@ -23,7 +24,7 @@ export default function StickyButtons() {
           </a>
 
           <a
-            href="https://wa.me/919602060414"
+            href={createWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("sticky_buttons_whatsapp")}
@@ -36,7 +37,7 @@ export default function StickyButtons() {
           </a>
 
           <a
-            href="https://wa.me/919602060414"
+            href={createWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {

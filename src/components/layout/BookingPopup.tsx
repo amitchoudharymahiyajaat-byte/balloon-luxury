@@ -6,6 +6,7 @@ import {
   trackWhatsAppClick,
 } from "../../lib/tracking";
 import { cities } from "../../lib/seo";
+import { createWhatsAppUrl } from "../../lib/business";
 
 export default function BookingPopup() {
   const [open, setOpen] = useState(false);
@@ -93,7 +94,7 @@ Budget: ${budget}
 Date: ${date}`;
 
             window.open(
-              `https://wa.me/919602060414?text=${encodeURIComponent(message)}`,
+              createWhatsAppUrl(message),
               "_blank"
             );
           }}

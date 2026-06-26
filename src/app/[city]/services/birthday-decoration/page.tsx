@@ -1,25 +1,22 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import BirthdayDecorationPage from "../../../../components/services/BirthdayDecorationPage";
-import { createPageMetadata } from "../../../../lib/seo";
-
-const cityNames: Record<string, string> = {
-  jaipur: "Jaipur",
-  sikar: "Sikar",
-  delhi: "Delhi",
-  "delhi-ncr": "Delhi NCR",
-  gurgaon: "Gurgaon",
-  chandigarh: "Chandigarh",
-};
+import {
+  createPageMetadata,
+  getSupportedCityName,
+  getSupportedCityStaticParams,
+} from "../../../../lib/seo";
 
 function formatCityName(slug: string) {
-  return (
-    cityNames[slug] ??
-    slug
-      .split("-")
-      .filter(Boolean)
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join(" ")
-  );
+  const cityName = getSupportedCityName(slug);
+
+  if (!cityName) notFound();
+
+  return cityName;
+}
+
+export function generateStaticParams() {
+  return getSupportedCityStaticParams();
 }
 
 export async function generateMetadata({

@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import BabyShowerDecorationPage from "../../../../components/services/BabyShowerDecorationPage";
-import { cities, createPageMetadata } from "../../../../lib/seo";
-
-const cityNames = Object.fromEntries(
-  cities.map((city) => [city.slug, city.name]),
-) as Record<string, string>;
+import {
+  createPageMetadata,
+  getSupportedCityName,
+  getSupportedCityStaticParams,
+} from "../../../../lib/seo";
 
 function formatCityName(slug: string) {
-  return (
-    cityNames[slug] ??
-    slug
-      .split("-")
-      .filter(Boolean)
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join(" ")
-  );
+  const cityName = getSupportedCityName(slug);
+
+  if (!cityName) notFound();
+
+  return cityName;
+}
+
+export function generateStaticParams() {
+  return getSupportedCityStaticParams();
 }
 
 export async function generateMetadata({

@@ -7,6 +7,7 @@ import {
   getBlogPostBySlug,
   getRelatedBlogPosts,
 } from "../../../lib/blog";
+import { createWhatsAppUrl } from "../../../lib/business";
 import { siteName, siteUrl } from "../../../lib/seo";
 
 type BlogDetailPageProps = {
@@ -339,7 +340,9 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <a
-                href="https://wa.me/919602060414?text=Hi%2C%20I%20need%20help%20planning%20event%20decoration"
+                href={createWhatsAppUrl(
+                  "Hi, I need help planning event decoration"
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center rounded-full bg-yellow-400 px-7 py-4 text-sm font-bold text-black transition hover:bg-white"

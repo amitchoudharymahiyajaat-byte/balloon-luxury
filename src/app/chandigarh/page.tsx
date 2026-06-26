@@ -10,6 +10,7 @@ import {
   siteName,
   siteUrl,
 } from "../../lib/seo";
+import { businessConfig } from "../../lib/business";
 import { chandigarhAreas } from "./areas";
 
 const Services = dynamic(() => import("../../components/home/Services"));
@@ -34,23 +35,13 @@ export default function ChandigarhPage() {
     url: `${siteUrl}/chandigarh`,
     image: new URL(ogImage, siteUrl).toString(),
     telephone: phoneNumber,
-    priceRange: "\u20B9\u20B9",
     description:
       "Premium balloon decoration services in Chandigarh, Mohali and Panchkula for birthdays, anniversaries, baby showers, romantic room decoration, hotel room decoration and surprise events.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Chandigarh",
-      addressRegion: "Chandigarh",
-      addressCountry: "IN",
-    },
     areaServed: chandigarhServiceAreas.map((area) => ({
       "@type": "Place",
       name: area,
     })),
-    sameAs: [
-      "https://www.instagram.com/eventwaladost",
-      "https://www.facebook.com/eventwaladost",
-    ],
+    sameAs: [businessConfig.instagramUrl, businessConfig.facebookUrl],
   };
 
   return (

@@ -5,6 +5,7 @@ import {
   trackCallClick,
   trackWhatsAppClick,
 } from "../../lib/tracking";
+import { businessConfig, createWhatsAppUrl } from "../../lib/business";
 
 export default function CTA({
   city = "major cities in India",
@@ -37,7 +38,7 @@ export default function CTA({
           <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
 
             <a
-              href="https://wa.me/919602060414"
+              href={createWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
@@ -50,7 +51,7 @@ export default function CTA({
             </a>
 
             <a
-              href="tel:+919602060414"
+              href={businessConfig.telHref}
               onClick={() => trackCallClick(`cta_call_${city}`)}
               className="rounded-full border-2 border-black text-black px-4 sm:px-8 py-2.5 sm:py-4 text-sm sm:text-base font-semibold transition hover:bg-black hover:text-white"
             >
