@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { cities } from "../../lib/seo";
-import { createWhatsAppUrl } from "../../lib/business";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -78,7 +78,7 @@ export default function Header() {
 
             {/* BUTTON */}
             <a
-              href={createWhatsAppUrl()}
+              href={createWhatsAppUrl(buildPageWhatsAppMessage({ page: "home" }))}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:scale-105 md:block"
@@ -130,7 +130,7 @@ export default function Header() {
               </select>
 
               <a
-                href={createWhatsAppUrl()}
+                href={createWhatsAppUrl(buildPageWhatsAppMessage({ page: "home" }))}
                 className="mt-3 rounded-full bg-black px-6 py-4 text-center text-white"
               >
                 Book On WhatsApp

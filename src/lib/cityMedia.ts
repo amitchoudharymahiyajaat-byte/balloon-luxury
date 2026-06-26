@@ -608,6 +608,10 @@ export function getServiceMedia(citySlug?: string): ServiceMediaItem[] {
   });
 }
 
+export function getServiceOptions() {
+  return defaultMedia.serviceCards.map((service) => service.title);
+}
+
 export function getServiceCardMedia(
   citySlug: string | undefined,
   serviceSlug: string,

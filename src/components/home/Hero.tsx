@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { getCityHero, getCitySlug, getHomeHero } from "../../lib/cityMedia";
 import { trackBookingClick, trackWhatsAppClick } from "../../lib/tracking";
-import { createWhatsAppUrl } from "../../lib/business";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 
 export default function Hero({
   city = "India",
@@ -18,6 +18,9 @@ export default function Hero({
   const heroImage = backgroundImage || (isHomepageHero ? homeHero.src : cityHero.src);
   const mobileHeroImage = homeHero.mobileSrc || homeHero.src;
   const heroAlt = isHomepageHero ? homeHero.alt : cityHero.alt;
+  const whatsappMessage = buildPageWhatsAppMessage(
+    isHomepageHero ? { page: "home" } : { page: "city", city },
+  );
 
   return (
     <section className="relative isolate overflow-hidden bg-[#130d08] text-white">
@@ -86,7 +89,7 @@ export default function Hero({
 
         <div className="mt-6 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4">
           <a
-            href={createWhatsAppUrl()}
+            href={createWhatsAppUrl(whatsappMessage)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {

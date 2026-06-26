@@ -42,13 +42,3 @@ export const businessConfig = {
     "https://www.facebook.com/eventwaladost"
   ),
 } as const;
-
-export function createWhatsAppUrl(message?: string) {
-  if (!message) {
-    return businessConfig.whatsappBaseUrl;
-  }
-
-  const url = new URL(businessConfig.whatsappBaseUrl);
-  url.searchParams.set("text", message);
-  return url.toString();
-}

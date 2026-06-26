@@ -1,4 +1,4 @@
-import { createWhatsAppUrl } from "../../lib/business";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 import Link from "next/link";
 import FallbackImage from "../home/FallbackImage";
 import {
@@ -249,7 +249,13 @@ export default function CustomThemeDecorationPage({
               Plan My Theme
             </a>
             <a
-              href={createWhatsAppUrl("Hi, I want to plan custom theme decoration")}
+              href={createWhatsAppUrl(
+                buildPageWhatsAppMessage({
+                  page: cityName ? "city-service" : "service",
+                  city: cityName,
+                  service: "Custom Theme Decoration",
+                }),
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full max-w-xs rounded-full border border-white/25 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition hover:border-yellow-300 hover:bg-yellow-300 hover:text-black sm:w-auto"

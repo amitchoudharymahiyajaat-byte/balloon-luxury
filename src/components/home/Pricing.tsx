@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { trackBookingClick, trackWhatsAppClick } from "../../lib/tracking";
-import { createWhatsAppUrl } from "../../lib/business";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 
 const packages = [
   {
@@ -92,7 +92,12 @@ export default function Pricing() {
               </ul>
 
               <a
-                href={createWhatsAppUrl()}
+                href={createWhatsAppUrl(
+                  buildPageWhatsAppMessage({
+                    page: "general",
+                    message: `I want to enquire about the ${item.name} decoration package.`,
+                  }),
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {

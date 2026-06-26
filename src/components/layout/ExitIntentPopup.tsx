@@ -3,10 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { trackExitOfferClaim, trackWhatsAppClick } from "../../lib/tracking";
-import { createWhatsAppUrl } from "../../lib/business";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 
 const whatsappUrl = createWhatsAppUrl(
-  "Hi, I want to claim the Rs. 500 discount"
+  buildPageWhatsAppMessage({
+    page: "general",
+    message: "I want to claim the Rs. 500 decoration discount.",
+  }),
 );
 
 function CelebrationBadge() {

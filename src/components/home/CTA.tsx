@@ -5,7 +5,8 @@ import {
   trackCallClick,
   trackWhatsAppClick,
 } from "../../lib/tracking";
-import { businessConfig, createWhatsAppUrl } from "../../lib/business";
+import { businessConfig } from "../../lib/business";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 
 export default function CTA({
   city = "major cities in India",
@@ -38,7 +39,12 @@ export default function CTA({
           <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
 
             <a
-              href={createWhatsAppUrl()}
+              href={createWhatsAppUrl(
+                buildPageWhatsAppMessage({
+                  page: city === "major cities in India" ? "home" : "city",
+                  city,
+                }),
+              )}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {

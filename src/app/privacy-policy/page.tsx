@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createPageMetadata, phoneNumber, siteUrl } from "../../lib/seo";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 
 const sections = [
   {
@@ -130,7 +131,9 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <p>
                   <a
-                    href={`https://wa.me/${phoneNumber.replace(/\D/g, "")}`}
+                    href={createWhatsAppUrl(
+                      buildPageWhatsAppMessage({ page: "contact" }),
+                    )}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-purple-700"

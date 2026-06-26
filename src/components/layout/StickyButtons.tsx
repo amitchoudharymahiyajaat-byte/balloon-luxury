@@ -5,7 +5,8 @@ import {
   trackCallClick,
   trackWhatsAppClick,
 } from "../../lib/tracking";
-import { businessConfig, createWhatsAppUrl } from "../../lib/business";
+import { businessConfig } from "../../lib/business";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 
 export default function StickyButtons() {
   return (
@@ -24,7 +25,7 @@ export default function StickyButtons() {
           </a>
 
           <a
-            href={createWhatsAppUrl()}
+            href={createWhatsAppUrl(buildPageWhatsAppMessage({ page: "home" }))}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("sticky_buttons_whatsapp")}
@@ -37,7 +38,12 @@ export default function StickyButtons() {
           </a>
 
           <a
-            href={createWhatsAppUrl()}
+            href={createWhatsAppUrl(
+              buildPageWhatsAppMessage({
+                page: "general",
+                message: "I want to book decoration for an upcoming event.",
+              }),
+            )}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {

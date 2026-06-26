@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { trackCallClick, trackWhatsAppClick } from "../../lib/tracking";
 import { cities } from "../../lib/seo";
-import { businessConfig, createWhatsAppUrl } from "../../lib/business";
+import { businessConfig } from "../../lib/business";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 
 const footerServices = [
   { href: "/services/birthday-decoration", label: "Birthday Decoration" },
@@ -81,7 +82,7 @@ export default function Footer() {
           </a>
 
           <a
-            href={createWhatsAppUrl()}
+            href={createWhatsAppUrl(buildPageWhatsAppMessage({ page: "contact" }))}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("footer_whatsapp")}

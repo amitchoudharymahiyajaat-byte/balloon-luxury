@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactEnquiryForm from "../../components/contact/ContactEnquiryForm";
-import { createPageMetadata, phoneNumber, siteUrl, supportedCities } from "../../lib/seo";
+import { businessConfig } from "../../lib/business";
+import { createPageMetadata, siteUrl, supportedCities } from "../../lib/seo";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Contact Us",
   description:
-    "Contact Event Wala Dost for balloon decoration enquiries in Jaipur, Ahmedabad, Chandigarh Tricity and Sikar. Share your event details to check availability.",
+    "Contact Event Wala Dost for balloon decoration enquiries in supported cities. Share your event details to check availability.",
   path: "/contact-us",
   keywords: [
     "contact Event Wala Dost",
@@ -15,17 +17,6 @@ export const metadata: Metadata = createPageMetadata({
     "WhatsApp decoration booking",
   ],
 });
-
-const serviceOptions = [
-  "Birthday Decoration",
-  "Anniversary Decoration",
-  "Baby Shower Decoration",
-  "Room Decoration",
-  "Wedding Decoration",
-  "Corporate Events",
-  "Custom Theme Decoration",
-  "Car Decoration",
-];
 
 export default function ContactUsPage() {
   return (
@@ -75,13 +66,15 @@ export default function ContactUsPage() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={`tel:${phoneNumber}`}
+                  href={businessConfig.telHref}
                   className="rounded-full bg-black px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]"
                 >
                   Call Now
                 </a>
                 <a
-                  href={`https://wa.me/${phoneNumber.replace(/\D/g, "")}`}
+                  href={createWhatsAppUrl(
+                    buildPageWhatsAppMessage({ page: "contact" }),
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border border-purple-200 bg-purple-50 px-5 py-3 text-sm font-semibold text-purple-700 transition hover:border-purple-400 hover:bg-purple-100"
@@ -117,7 +110,7 @@ export default function ContactUsPage() {
                 Use the form below to prepare a WhatsApp enquiry with your details. Service availability is subject to event date, team schedule, venue access, materials and travel requirements.
               </p>
               <div className="mt-6">
-                <ContactEnquiryForm serviceOptions={serviceOptions} />
+                <ContactEnquiryForm />
               </div>
             </div>
           </div>

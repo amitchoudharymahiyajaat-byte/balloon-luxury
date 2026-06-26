@@ -7,8 +7,8 @@ import {
   getBlogPostBySlug,
   getRelatedBlogPosts,
 } from "../../../lib/blog";
-import { createWhatsAppUrl } from "../../../lib/business";
 import { siteName, siteUrl } from "../../../lib/seo";
+import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../../lib/whatsapp";
 
 type BlogDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -341,7 +341,10 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
               <a
                 href={createWhatsAppUrl(
-                  "Hi, I need help planning event decoration"
+                  buildPageWhatsAppMessage({
+                    page: "blog",
+                    articleTitle: post.title,
+                  }),
                 )}
                 target="_blank"
                 rel="noopener noreferrer"

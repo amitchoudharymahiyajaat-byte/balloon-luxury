@@ -5,14 +5,10 @@ import {
   trackPopupSubmit,
   trackWhatsAppClick,
 } from "../../lib/tracking";
-import { cities } from "../../lib/seo";
-import { createWhatsAppUrl } from "../../lib/business";
+import EnquiryForm from "../shared/EnquiryForm";
 
 export default function BookingPopup() {
   const [open, setOpen] = useState(false);
-  const fieldClassName =
-    "w-full rounded-2xl border border-gray-200 bg-white px-5 py-3.5 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-purple-500";
-  const selectClassName = `${fieldClassName} [&_option]:bg-white [&_option]:text-gray-900`;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -69,109 +65,18 @@ export default function BookingPopup() {
           </p>
         </div>
 
-        <form
-          className="mt-6 space-y-3"
-          onSubmit={(e) => {
-            e.preventDefault();
-            trackPopupSubmit("booking_popup");
-            trackWhatsAppClick("booking_popup_submit");
-
-            const formData = new FormData(e.currentTarget);
-            const name = formData.get("name");
-            const phone = formData.get("phone");
-            const city = formData.get("city");
-            const event = formData.get("event");
-            const budget = formData.get("budget");
-            const date = formData.get("date");
-
-            const message = `New Decoration Booking
-
-Name: ${name}
-Phone: ${phone}
-City: ${city}
-Event: ${event}
-Budget: ${budget}
-Date: ${date}`;
-
-            window.open(
-              createWhatsAppUrl(message),
-              "_blank"
-            );
-          }}
-        >
-          <input
-            type="text"
-            name="name"
-            aria-label="Your name"
-            placeholder="Your Name"
-            required
-            className={fieldClassName}
+        <div className="mt-6">
+          <EnquiryForm
+            page="Quick Booking Popup"
+            trackingSource="booking_popup"
+            submitLabel="Send Enquiry on WhatsApp"
+            className="space-y-3"
+            onValidSubmit={() => {
+              trackPopupSubmit("booking_popup");
+              trackWhatsAppClick("booking_popup_submit");
+            }}
           />
-
-          <input
-            type="tel"
-            name="phone"
-            aria-label="Phone number"
-            placeholder="Phone Number"
-            required
-            className={fieldClassName}
-          />
-
-          <select
-            name="city"
-            aria-label="Select city"
-            required
-            className={selectClassName}
-          >
-            <option value="">Select City</option>
-            {cities.map((city) => (
-              <option key={city.slug}>{city.name}</option>
-            ))}
-          </select>
-
-          <select
-            name="event"
-            aria-label="Select event type"
-            required
-            className={selectClassName}
-          >
-            <option value="">Select Event Type</option>
-            <option>Birthday Decoration</option>
-            <option>Anniversary Decoration</option>
-            <option>Baby Shower</option>
-            <option>Proposal Setup</option>
-            <option>Romantic Room Decoration</option>
-          </select>
-
-          <select
-            name="budget"
-            aria-label="Select budget"
-            required
-            className={selectClassName}
-          >
-            <option value="">Select Budget</option>
-            <option>Under Rs. 2,000</option>
-            <option>Rs. 2,000 - Rs. 5,000</option>
-            <option>Rs. 5,000 - Rs. 10,000</option>
-            <option>Rs. 10,000 - Rs. 20,000</option>
-            <option>Luxury Setup Rs. 20,000+</option>
-          </select>
-
-          <input
-            type="date"
-            name="date"
-            aria-label="Event date"
-            required
-            className={fieldClassName}
-          />
-
-          <button
-            type="submit"
-            className="w-full rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-[1.02]"
-          >
-            Get Instant Quote on WhatsApp
-          </button>
-        </form>
+        </div>
       </div>
     </div>
   );
