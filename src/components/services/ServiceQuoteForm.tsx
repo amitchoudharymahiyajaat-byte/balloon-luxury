@@ -3,7 +3,6 @@
 import EnquiryForm from "../shared/EnquiryForm";
 import {
   trackBookingClick,
-  trackPopupSubmit,
   trackWhatsAppClick,
 } from "../../lib/tracking";
 
@@ -30,7 +29,6 @@ export default function ServiceQuoteForm({
       submitLabel={submitLabel}
       onValidSubmit={(source) => {
         const trackingName = source ?? trackingSource;
-        trackPopupSubmit(trackingName);
         trackBookingClick(trackingName);
         trackWhatsAppClick(`${trackingName}_quote`);
       }}

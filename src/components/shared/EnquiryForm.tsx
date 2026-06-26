@@ -8,6 +8,7 @@ import {
   buildWhatsAppUrl,
   type EnquiryMessageData,
 } from "../../lib/whatsapp";
+import { trackLeadFormSubmit } from "../../lib/tracking";
 
 type EnquiryFormData = {
   name: string;
@@ -215,10 +216,6 @@ export default function EnquiryForm({
       return;
     }
 
-    setIsOpening(true);
-    cooldownUntilRef.current = now + 2500;
-    onValidSubmit?.(trackingSource);
-
     const opened = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 
     if (!opened) {
@@ -229,6 +226,12 @@ export default function EnquiryForm({
       return;
     }
 
+    setIsOpening(true);
+    cooldownUntilRef.current = now + 2500;
+    trackLeadFormSubmit(trackingSource, {
+      form_location: trackingSource,
+    });
+    onValidSubmit?.(trackingSource);
     setStatus("WhatsApp has been opened. Send the prepared message there to complete your enquiry.");
 
     window.setTimeout(() => {

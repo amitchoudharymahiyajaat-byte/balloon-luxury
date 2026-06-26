@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { cities } from "../../lib/seo";
 import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
+import { trackBookNowClick, trackCitySelected, trackWhatsAppClick } from "../../lib/tracking";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -58,7 +59,10 @@ export default function Header() {
             <select
               onChange={(e) => {
                 const val = (e.target as HTMLSelectElement).value;
-                if (val) router.push(`/${val}`);
+                if (val) {
+                  trackCitySelected(val, "header_desktop");
+                  router.push(`/${val}`);
+                }
               }}
               defaultValue=""
               className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-700 backdrop-blur-xl outline-none transition hover:border-yellow-400"
@@ -81,6 +85,10 @@ export default function Header() {
               href={createWhatsAppUrl(buildPageWhatsAppMessage({ page: "home" }))}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                trackWhatsAppClick("header_book_now");
+                trackBookNowClick("header_book_now");
+              }}
               className="hidden rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:scale-105 md:block"
             >
               Book Now
@@ -116,7 +124,10 @@ export default function Header() {
               <select
                 onChange={(e) => {
                   const val = (e.target as HTMLSelectElement).value;
-                  if (val) router.push(`/${val}`);
+                  if (val) {
+                    trackCitySelected(val, "header_mobile_menu");
+                    router.push(`/${val}`);
+                  }
                 }}
                 defaultValue=""
                 className="rounded-full border border-black/10 bg-white px-4 py-3 text-left text-sm font-medium text-gray-700 outline-none"
@@ -131,6 +142,10 @@ export default function Header() {
 
               <a
                 href={createWhatsAppUrl(buildPageWhatsAppMessage({ page: "home" }))}
+                onClick={() => {
+                  trackWhatsAppClick("mobile_menu_book_now");
+                  trackBookNowClick("mobile_menu_book_now");
+                }}
                 className="mt-3 rounded-full bg-black px-6 py-4 text-center text-white"
               >
                 Book On WhatsApp

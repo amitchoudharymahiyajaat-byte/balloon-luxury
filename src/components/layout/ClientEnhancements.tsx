@@ -10,14 +10,22 @@ const FloatingWhatsApp = dynamic(() => import("./FloatingWhatsApp"), {
 const ExitIntentPopup = dynamic(() => import("./ExitIntentPopup"), {
   ssr: false,
 });
+const AnalyticsManager = dynamic(() => import("./AnalyticsManager"), {
+  ssr: false,
+});
+const CookieConsent = dynamic(() => import("./CookieConsent"), {
+  ssr: false,
+});
 
 export default function ClientEnhancements() {
   return (
     <>
+      <AnalyticsManager />
       <BookingPopup />
       <StickyButtons />
       <FloatingWhatsApp />
       <ExitIntentPopup />
+      <CookieConsent />
     </>
   );
 }

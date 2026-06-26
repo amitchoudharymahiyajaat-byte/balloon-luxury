@@ -1,4 +1,8 @@
 import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
+import {
+  TrackedBookLink,
+  TrackedWhatsAppLink,
+} from "../shared/TrackedActions";
 import FallbackImage from "../home/FallbackImage";
 import {
   getCitySlug,
@@ -143,13 +147,15 @@ export default function BirthdayDecorationPage({
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
+            <TrackedBookLink
               href="#birthday-booking"
+              location="service_hero_book"
+              params={{ service_slug: serviceSlug, city_slug: citySlug || undefined }}
               className="w-full max-w-xs rounded-full bg-yellow-400 px-7 py-3.5 text-sm font-bold text-black shadow-xl shadow-yellow-900/20 transition hover:scale-105 hover:bg-white sm:w-auto"
             >
               Book This Decor
-            </a>
-            <a
+            </TrackedBookLink>
+            <TrackedWhatsAppLink
               href={createWhatsAppUrl(
                 buildPageWhatsAppMessage({
                   page: cityName ? "city-service" : "service",
@@ -157,12 +163,12 @@ export default function BirthdayDecorationPage({
                   service: "Birthday Decoration",
                 }),
               )}
-              target="_blank"
-              rel="noopener noreferrer"
+              location="service_hero_whatsapp"
+              params={{ service_slug: serviceSlug, city_slug: citySlug || undefined }}
               className="w-full max-w-xs rounded-full border border-white/25 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition hover:border-yellow-300 hover:bg-yellow-300 hover:text-black sm:w-auto"
             >
               WhatsApp
-            </a>
+            </TrackedWhatsAppLink>
           </div>
         </div>
       </section>

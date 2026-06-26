@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { getCitySlug, getServiceMedia } from "../../lib/cityMedia";
+import { trackServiceCardClick } from "../../lib/tracking";
 import FallbackImage from "./FallbackImage";
 
 export type ServiceImageKey = `/services/${string}`;
@@ -98,6 +99,11 @@ export default function Services({
 
               <Link
                 href={service.href}
+                onClick={() =>
+                  trackServiceCardClick(service.href.split("/").at(-1) ?? "", {
+                    city_slug: citySlug || undefined,
+                  })
+                }
                 className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-white/80 bg-white shadow-md shadow-purple-950/5 ring-1 ring-black/5 transition duration-300 hover:-translate-y-1.5 hover:border-purple-200 hover:shadow-xl hover:shadow-purple-950/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500"
               >
                 <div className="relative h-48 overflow-hidden sm:h-56">

@@ -5,6 +5,7 @@ import { trackCallClick, trackWhatsAppClick } from "../../lib/tracking";
 import { cities } from "../../lib/seo";
 import { businessConfig } from "../../lib/business";
 import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
+import { openCookieSettings } from "../../lib/consent";
 
 const footerServices = [
   { href: "/services/birthday-decoration", label: "Birthday Decoration" },
@@ -108,6 +109,13 @@ export default function Footer() {
           <Link href="/contact-us" className="transition hover:text-white">
             Contact Us
           </Link>
+          <button
+            type="button"
+            onClick={openCookieSettings}
+            className="transition hover:text-white focus:outline-none focus:ring-2 focus:ring-white/50"
+          >
+            Cookie Settings
+          </button>
         </div>
         <p className="mt-4 text-center text-sm text-gray-500">
           Copyright 2026 Event Wala Dost. All rights reserved.

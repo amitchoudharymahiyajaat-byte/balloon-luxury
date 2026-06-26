@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FallbackImage from "../../../components/home/FallbackImage";
+import { TrackedWhatsAppLink } from "../../../components/shared/TrackedActions";
 import {
   blogPosts,
   getBlogPostBySlug,
@@ -339,19 +340,19 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-              <a
+              <TrackedWhatsAppLink
                 href={createWhatsAppUrl(
                   buildPageWhatsAppMessage({
                     page: "blog",
                     articleTitle: post.title,
                   }),
                 )}
-                target="_blank"
-                rel="noopener noreferrer"
+                location="blog_cta"
+                params={{ article_slug: post.slug, page_type: "blog" }}
                 className="inline-flex justify-center rounded-full bg-yellow-400 px-7 py-4 text-sm font-bold text-black transition hover:bg-white"
               >
                 Book On WhatsApp
-              </a>
+              </TrackedWhatsAppLink>
               <Link
                 href="/#services"
                 className="inline-flex justify-center rounded-full border border-white/20 px-7 py-4 text-sm font-bold text-white transition hover:border-yellow-300 hover:bg-yellow-300 hover:text-black"

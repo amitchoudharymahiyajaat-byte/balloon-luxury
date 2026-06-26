@@ -10,11 +10,13 @@ import {
   type TouchEvent,
 } from "react";
 import { getCitySlug, getGalleryMedia } from "../../lib/cityMedia";
+import { trackGalleryOpen } from "../../lib/tracking";
 
 export default function Gallery({ city = "" }: { city?: string }) {
+  const citySlug = getCitySlug(city);
   const galleryImages = useMemo(
-    () => getGalleryMedia(getCitySlug(city)),
-    [city],
+    () => getGalleryMedia(citySlug),
+    [citySlug],
   );
   const galleryCount = galleryImages.length;
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -102,7 +104,12 @@ export default function Gallery({ city = "" }: { city?: string }) {
             <motion.button
               key={image.src}
               type="button"
-              onClick={() => setActiveIndex(index)}
+              onClick={() => {
+                setActiveIndex(index);
+                trackGalleryOpen(String(index + 1), {
+                  city_slug: citySlug || undefined,
+                });
+              }}
               aria-label={`Open gallery image ${index + 1}`}
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}

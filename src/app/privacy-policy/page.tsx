@@ -28,8 +28,9 @@ const sections = [
   {
     heading: "Analytics, cookies and optional tools",
     paragraphs: [
-      "Analytics and advertising tools may be used when enabled and consented to, such as Google Analytics or Google Tag Manager, and Meta Pixel or remarketing where configured.",
-      "Cookies and similar technologies may be used to improve website performance and remember your preferences where applicable.",
+      "Optional analytics and advertising tools may be used only when configured and consented to, such as Google Analytics 4, Google Tag Manager, Meta Pixel and advertising or remarketing technologies.",
+      "Where the website provides consent controls, optional analytics and marketing technologies are controlled by your saved preferences. Necessary website functionality remains available even if optional tracking is rejected.",
+      "Cookie or local browser storage may be used to remember your consent preferences and support core website functionality where applicable.",
     ],
   },
   {

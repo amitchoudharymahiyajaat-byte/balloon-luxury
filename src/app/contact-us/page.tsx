@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactEnquiryForm from "../../components/contact/ContactEnquiryForm";
+import {
+  TrackedCallLink,
+  TrackedWhatsAppLink,
+} from "../../components/shared/TrackedActions";
 import { businessConfig } from "../../lib/business";
 import { createPageMetadata, siteUrl, supportedCities } from "../../lib/seo";
 import { buildPageWhatsAppMessage, createWhatsAppUrl } from "../../lib/whatsapp";
@@ -65,22 +69,22 @@ export default function ContactUsPage() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a
+                <TrackedCallLink
                   href={businessConfig.telHref}
+                  location="contact_page_call"
                   className="rounded-full bg-black px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]"
                 >
                   Call Now
-                </a>
-                <a
+                </TrackedCallLink>
+                <TrackedWhatsAppLink
                   href={createWhatsAppUrl(
                     buildPageWhatsAppMessage({ page: "contact" }),
                   )}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  location="contact_page_whatsapp"
                   className="rounded-full border border-purple-200 bg-purple-50 px-5 py-3 text-sm font-semibold text-purple-700 transition hover:border-purple-400 hover:bg-purple-100"
                 >
                   WhatsApp Enquiry
-                </a>
+                </TrackedWhatsAppLink>
               </div>
 
               <div className="mt-8 rounded-[28px] border border-gray-100 bg-[#fff8f3] p-6">

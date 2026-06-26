@@ -3,6 +3,11 @@ const trimTrailingSlash = (value: string) => value.replace(/\/+$/, "");
 const withFallback = (value: string | undefined, fallback: string) =>
   value?.trim() || fallback;
 
+const optionalPublicValue = (value: string | undefined) => {
+  const trimmed = value?.trim() ?? "";
+  return trimmed.length > 0 ? trimmed : undefined;
+};
+
 const siteUrl = trimTrailingSlash(
   withFallback(process.env.NEXT_PUBLIC_SITE_URL, "https://eventwaladost.com")
 );
@@ -41,4 +46,9 @@ export const businessConfig = {
     process.env.NEXT_PUBLIC_FACEBOOK_URL,
     "https://www.facebook.com/eventwaladost"
   ),
+  analytics: {
+    gaId: optionalPublicValue(process.env.NEXT_PUBLIC_GA_ID),
+    gtmId: optionalPublicValue(process.env.NEXT_PUBLIC_GTM_ID),
+    metaPixelId: optionalPublicValue(process.env.NEXT_PUBLIC_META_PIXEL_ID),
+  },
 } as const;

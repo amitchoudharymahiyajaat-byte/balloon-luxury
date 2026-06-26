@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import FallbackImage from "../home/FallbackImage";
+import { trackGalleryOpen } from "../../lib/tracking";
 
 type GalleryImage = {
   src: string;
@@ -50,7 +51,10 @@ export default function RoomDecorationGallery({
                 <button
                   key={image.src}
                   type="button"
-                  onClick={() => setSelectedIndex(index)}
+                  onClick={() => {
+                    setSelectedIndex(index);
+                    trackGalleryOpen(String(index + 1));
+                  }}
                   className={`relative h-24 w-32 shrink-0 overflow-hidden rounded-2xl border transition lg:h-[82px] lg:w-full ${
                     selected
                       ? "border-purple-600 ring-2 ring-purple-200"
