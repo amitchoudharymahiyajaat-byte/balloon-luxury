@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Event Wala Dost 🎈
 
-## Getting Started
+A responsive multi-city website for luxury balloon decoration and celebration services across India.
 
-First, run the development server:
+🌐 **Live Website:** [eventwaladost.com](https://eventwaladost.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About the Project
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Event Wala Dost helps customers explore balloon decoration services for birthdays, anniversaries, baby showers, proposals, weddings, corporate events, and other celebrations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The website includes dedicated service and city pages, galleries, customer reviews, FAQs, and direct WhatsApp and call options for lead generation.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Features
 
-## Learn More
+- Responsive design for mobile, tablet, and desktop
+- Multi-city and service-specific pages
+- WhatsApp and call integration
+- Image galleries and customer reviews
+- SEO-friendly page structure
+- Fast-loading static website
+- Google Analytics and Tag Manager integration
+- Contact and lead-generation sections
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- HTML, CSS and JavaScript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Live Project
 
-## Deploy on Vercel
+Visit the live website:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[https://eventwaladost.com](https://eventwaladost.com)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Developer
+
+Developed by **Amit Choudhary**
+
+Next.js Web Developer and Founder of **Amit Web Studio**
